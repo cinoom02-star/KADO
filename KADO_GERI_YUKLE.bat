@@ -1,0 +1,3 @@
+@echo off
+call "%~dp0KADO-AI-COMPANY\KADO-AI-COMPANY\KADO_GERI_YUKLE.bat" %*
+exit /b %ERRORLEVEL%

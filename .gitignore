@@ -23,3 +23,8 @@ sessions/
 memory/
 data/
 recordings/
+
+# Recovery archives and browser session state must stay local.
+.session/
+backups/
+*.zip

@@ -5,6 +5,7 @@ output is stdout, so the caller explicitly chooses its destination.
 """
 from __future__ import annotations
 import argparse
+import ast
 import hashlib
 import json
 import os
@@ -46,7 +47,7 @@ def inspect_root(root: str | Path, *, max_files: int = 4000, max_file_bytes: int
     resolved = root.resolve()
     for directory, dirs, files in os.walk(root, followlinks=False):
         before = len(dirs)
-        dirs[:] = [name for name in dirs if safe_name(name) and not (Path(directory) / name).is_symlink()]
+        dirs[:] = [name for name in sorted(dirs) if safe_name(name) and not (Path(directory) / name).is_symlink()]
         result["skipped"] += before - len(dirs)
         for name in sorted(files):
             path = Path(directory) / name
@@ -66,10 +67,18 @@ def inspect_root(root: str | Path, *, max_files: int = 4000, max_file_bytes: int
                 if len(raw) > max_file_bytes:
                     result["skipped"] += 1
                     continue
-                text = raw.decode("utf-8", errors="replace")
+                text = raw.decode("utf-8-sig", errors="replace")
+                syntax = {"status": "not_checked"}
+                if path.suffix.casefold() == ".py":
+                    try:
+                        ast.parse(text, filename=str(path.relative_to(root)))
+                        syntax = {"status": "valid", "scope": "syntax_only_not_runtime"}
+                    except SyntaxError as exc:
+                        syntax = {"status": "invalid", "error_type": type(exc).__name__, "line": exc.lineno}
                 signatures = {key: len(pattern.findall(text)) for key, pattern in SIGNATURES.items() if pattern.search(text)}
                 result["files"].append({"path": str(path.relative_to(root)), "bytes": len(raw),
-                                        "sha256": hashlib.sha256(raw).hexdigest(), "candidate_signatures": signatures})
+                                        "sha256": hashlib.sha256(raw).hexdigest(), "candidate_signatures": signatures, "syntax": syntax,
+                                        "runtime_status": "unverified"})
             except (OSError, ValueError) as exc:
                 result["errors"].append({"path": str(path.relative_to(root)), "error": type(exc).__name__})
     return result

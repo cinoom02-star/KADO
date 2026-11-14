@@ -279,3 +279,15 @@ def test_read_only_inspector_excludes_secrets_sessions_symlinks(tmp_path):
     assert report["files"][0]["candidate_signatures"]["whatsapp_puppeteer"] == 1
     assert "should-never-read" not in json.dumps(report)
     assert (tmp_path / "bridge.py").read_bytes() == before
+
+
+def test_inventory_checks_syntax_without_running_code_or_leaking_source(tmp_path):
+    (tmp_path / 'broken.py').write_text('    async def snippet():\n        pass\n')
+    (tmp_path / 'valid.py').write_text('\ufeffraise RuntimeError("DO_NOT_EXECUTE_OR_EXPORT")\n', encoding='utf-8')
+    report = inspect_root(tmp_path)
+    entries = {entry['path']: entry for entry in report['files']}
+    assert entries['broken.py']['syntax']['status'] == 'invalid'
+    assert entries['broken.py']['syntax']['line'] == 1
+    assert entries['valid.py']['syntax']['status'] == 'valid'
+    assert all(entry['runtime_status'] == 'unverified' for entry in entries.values())
+    assert 'DO_NOT_EXECUTE_OR_EXPORT' not in json.dumps(report)
