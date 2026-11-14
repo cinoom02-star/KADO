@@ -1,0 +1,14 @@
+YAYIN NOTU (KADO) - 20261111_133225_f0fb31
+Hazirlanma: 11.11.2026 15:56
+Durum: ONAYLI. KADO bu paketi YAYINLAMADI; paylasim senin elinde.
+
+Icerik:
+- tanitim_paketi.md  -> gonderi metni, hashtag ve takvim. Paylasmadan once bir kez oku.
+- gorseller\  -> *_kare.png (gonderi), *_hikaye.png (hikaye)
+- video\reel.mp4  -> sessiz taslak video
+
+Paylasmadan once kontrol:
+[ ] Metinde garanti, "en iyi", olmayan ozellik, fiyat ya da indirim iddiasi yok
+[ ] Uygulama/urun henuz cikmadiysa "indir" ya da "magazada" gibi ifade yok
+[ ] Video sessiz: muzigi paylasim ekranindan kendin sec
+[ ] Telefona zip'i aktar (kablo, bulut ya da kendine mesaj), ac, paylas

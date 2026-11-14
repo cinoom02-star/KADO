@@ -1,0 +1,247 @@
+{
+  "version": "3.0.0",
+  "goal": "30 gunluk icerik ritmi ve influencer buyutme temeli",
+  "days": [
+    {
+      "day": 1,
+      "platform": "instagram",
+      "type": "reel",
+      "topic": "KADO tanitim",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 2,
+      "platform": "tiktok",
+      "type": "kisa video",
+      "topic": "Han Toys oyuncak fikri",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 3,
+      "platform": "youtube",
+      "type": "short",
+      "topic": "Yapay zeka ipucu",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 4,
+      "platform": "instagram",
+      "type": "post",
+      "topic": "arkaplan gunlugu",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 5,
+      "platform": "tiktok",
+      "type": "kisa video",
+      "topic": "mikro hikaye",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 6,
+      "platform": "instagram",
+      "type": "reel",
+      "topic": "KADO tanitim",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 7,
+      "platform": "tiktok",
+      "type": "kisa video",
+      "topic": "Han Toys oyuncak fikri",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 8,
+      "platform": "youtube",
+      "type": "short",
+      "topic": "Yapay zeka ipucu",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 9,
+      "platform": "instagram",
+      "type": "post",
+      "topic": "arkaplan gunlugu",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 10,
+      "platform": "tiktok",
+      "type": "kisa video",
+      "topic": "mikro hikaye",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 11,
+      "platform": "instagram",
+      "type": "reel",
+      "topic": "KADO tanitim",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 12,
+      "platform": "tiktok",
+      "type": "kisa video",
+      "topic": "Han Toys oyuncak fikri",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 13,
+      "platform": "youtube",
+      "type": "short",
+      "topic": "Yapay zeka ipucu",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 14,
+      "platform": "instagram",
+      "type": "post",
+      "topic": "arkaplan gunlugu",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 15,
+      "platform": "tiktok",
+      "type": "kisa video",
+      "topic": "mikro hikaye",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 16,
+      "platform": "instagram",
+      "type": "reel",
+      "topic": "KADO tanitim",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 17,
+      "platform": "tiktok",
+      "type": "kisa video",
+      "topic": "Han Toys oyuncak fikri",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 18,
+      "platform": "youtube",
+      "type": "short",
+      "topic": "Yapay zeka ipucu",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 19,
+      "platform": "instagram",
+      "type": "post",
+      "topic": "arkaplan gunlugu",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 20,
+      "platform": "tiktok",
+      "type": "kisa video",
+      "topic": "mikro hikaye",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 21,
+      "platform": "instagram",
+      "type": "reel",
+      "topic": "KADO tanitim",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 22,
+      "platform": "tiktok",
+      "type": "kisa video",
+      "topic": "Han Toys oyuncak fikri",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 23,
+      "platform": "youtube",
+      "type": "short",
+      "topic": "Yapay zeka ipucu",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 24,
+      "platform": "instagram",
+      "type": "post",
+      "topic": "arkaplan gunlugu",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 25,
+      "platform": "tiktok",
+      "type": "kisa video",
+      "topic": "mikro hikaye",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 26,
+      "platform": "instagram",
+      "type": "reel",
+      "topic": "KADO tanitim",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 27,
+      "platform": "tiktok",
+      "type": "kisa video",
+      "topic": "Han Toys oyuncak fikri",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 28,
+      "platform": "youtube",
+      "type": "short",
+      "topic": "Yapay zeka ipucu",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 29,
+      "platform": "instagram",
+      "type": "post",
+      "topic": "arkaplan gunlugu",
+      "status": "planlandi",
+      "needs_human_approval": true
+    },
+    {
+      "day": 30,
+      "platform": "tiktok",
+      "type": "kisa video",
+      "topic": "mikro hikaye",
+      "status": "planlandi",
+      "needs_human_approval": true
+    }
+  ],
+  "updated_at": "2026-11-12T07:46:55+00:00"
+}

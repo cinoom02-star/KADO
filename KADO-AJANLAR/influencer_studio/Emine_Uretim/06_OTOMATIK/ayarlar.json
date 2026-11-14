@@ -1,0 +1,11 @@
+{
+  "saat": "11:00",
+  "konusan_yuz": "auto",
+  "sad_talker_klasor": "",
+  "sad_talker_python": "",
+  "ollama_model": "",
+  "ses_modeli": "ilkiz",
+  "otomatik_yayin": false,
+  "reels_genislik": 720,
+  "reels_yukseklik": 1280
+}

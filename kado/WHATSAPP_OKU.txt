@@ -1,0 +1,68 @@
+KADO WHATSAPP GUNCELLEMESI - 06.11.2026
+
+BU PAKET NE YAPAR?
+- Mevcut WhatsApp Business hattina bagli cihaz olarak QR ile baglanir.
+- Yeni gelen bireysel yazili mesajlara Gemini ile cevap verir.
+- Gelen ses kaydini Gemini ile anlayip mevcut ElevenLabs sesinle ses kaydi yollar.
+- Yazinin basina "sesli:" yazilinca da sesli cevap uretir.
+- ElevenLabs kullanilamazsa yazili cevap verir.
+- Gelen gercek WhatsApp aramasini ACMAZ. Canli gorusme bu surumde YOKTUR.
+- Gruplar, durumlar, eski mesajlar, gorsel ve belge mesajlari islenmez.
+- Kado yapay zeka asistani oldugunu ilk cevabinda belirtir.
+- Stok/fiyat veritabani veya PC komutlari baglanmamistir. Modelin cevaplari
+  kontrol edilmelidir; fiyat, stok ve siparis bilgileri bu pakette bilinmez.
+
+KURULUM
+1. ZIP'i mevcut BASLAT.bat ve sistem klasorunun oldugu kado klasorune ayikla.
+   Sonuc: kado\WHATSAPP_BASLAT.bat ve kado\sistem\whatsapp_kado\bridge.js
+   olmali. Kado klasorunun icine tekrar kado klasoru acma.
+2. WHATSAPP_BASLAT.bat'a cift tikla.
+3. Node.js bulunamadi derse https://nodejs.org adresinden 22 veya uzeri LTS
+   surumunu kur, pencereyi kapat ve WHATSAPP_BASLAT.bat'i tekrar ac.
+   GitHub hesabi veya Git kurulumu gerekmez.
+4. Ilk acilis yardimcilari internetten indirir (Chromium dahil).
+5. Ilk denemede 1'i sec. Mesaj gonderecek diger telefonun ulke kodlu
+   numarasini yaz: 905xxxxxxxxx. Bu numara sadece test filtresidir; yeni hat
+   satin almak gerekmez, mevcut baska bir telefon kullanilir.
+6. QR'i SIRKET TELEFONUNDA WhatsApp Business > Bagli cihazlar > Cihaz bagla
+   bolumunden okut. QR kodunu kimseyle paylasma.
+7. Diger telefondan sirkete "Merhaba" yaz. Sonra kisa ses kaydi gonder.
+8. Testten sonra pencereyi kapatip yeniden ac; 2 ve EVET secersen tum YENI
+   bireysel mesajlara cevap verir. Musterilerle konusmaya baslar.
+
+KULLANIM
+- Modulu kullanirken bu pencere ve bilgisayar acik, internet bagli kalmali.
+- Normal Kado BASLAT.bat ayrica acik olabilir; bu modul ayri calisir.
+- Pencereye dur yazip Enter: otomatik cevaplari durdurur.
+- ac yazip Enter: yeniden acar. cik yazip Enter: kapatir.
+- Telefondan bir sohbete sen cevap verirsen bot o sohbette 15 dakika susar.
+- Gelen sesin boyutu en fazla 8 MB. Ayni anda en fazla 10 mesaj bekletilir;
+  yogunlukta fazlalar otomatik yanitlanmaz. Hatalar pencerede gorunur.
+- Test filtresi telefon numarasini yeni WhatsApp @lid kimligiyle de eslestirir.
+  Esleme servisi calismazsa test mesaji filtreye takilabilir.
+  Boyle bir durumda tum sohbetleri acmadan once destek isteyin.
+
+AYARLAR / GIZLILIK
+- sistem\config\api_keys.json degistirilmez; mevcut Gemini ve ElevenLabs
+  anahtarlari/ses kimligi okunur. Paket gercek anahtar icermez.
+- Istege bagli whatsapp_model ayari ayni JSON'a eklenebilir; bos ise mevcut
+  agent_model, o da bos ise API'nin sundugu Flash modellerinden biri kullanilir.
+- Resmi olmayan whatsapp-web.js baglantisidir. Oturum kopmasi ve WhatsApp
+  hesabinin kisitlanmasi riski vardir. Isletme hatti icin bunu dikkate alin.
+- Gemini/ElevenLabs kullanimi mevcut hizmet kotalariniza/ucretlerinize tabidir.
+- Musteri metinleri ve ses kayitlari Gemini'ye, cevap metni ElevenLabs'a gider.
+- Sohbet baglami yalnizca RAM'de, sohbet bazinda, son 12 ileti ve yaklasik
+  1 saat tutulur. Yeniden baslatmada unutulur. Mesaj metinleri loglanmaz.
+- .session klasoru WhatsApp oturumunu saklar. Bu klasoru kimseye gondermeyin.
+- Baglantiyi kaldirmak icin telefonda Bagli cihazlar'dan bu cihazin cikisini yapin.
+- Gelen musteriler bilgisayar komutu calistiramaz; bu paket sadece sohbet eder.
+
+DOGRULAMA
+Kodun sozdizimi ve otomatik politika/servis taklit testleri kontrol edilmistir.
+Gercek WhatsApp oturumu, Windows kurulum ve ses gonderimi bu ortamda canli
+olarak test edilmemistir. QR ile baglandiktan sonra 1. modda deneme gereklidir.
+
+KAYNAK / LISANS
+Gonderdiginiz whatsapp-web.js 1.34.7 kaynagi vendor altinda bulunur.
+Lisans dosyasi korunmustur. Sadece kurulum gelistirici betikleri ve gereksiz
+gelisim/belge klasorleri cikarilmistir. Runtime kaynaklari degistirilmemistir.

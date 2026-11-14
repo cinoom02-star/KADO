@@ -1,0 +1,93 @@
+﻿import re
+import sys
+import unicodedata
+from kado_19_uzman import UZMANLAR, kadro_kontrol
+
+ANAHTARLAR = {
+    "U01": ("web", "internet", "kaynak", "resmi site"),
+    "U02": ("github", "repo", "depo", "acik kaynak"),
+    "U03": ("rakip", "pazar", "fiyat arastirmasi"),
+    "U04": ("kod yaz", "uygulama gelistir", "fonksiyon yaz"),
+    "U05": ("hata", "debug", "bug", "traceback"),
+    "U06": ("test", "pytest", "birim testi"),
+    "U07": ("guvenlik", "zafiyet", "acik tara"),
+    "U08": ("gorsel uret", "resim olustur", "afis hazirla"),
+    "U09": ("fotograf duzenle", "arka plan sil", "fotograf temizle"),
+    "U10": ("urun gorseli", "oyuncak gorseli", "trendyol gorseli"),
+    "U11": ("video uret", "video olustur", "animasyon yap"),
+    "U12": ("video kurgu", "video montaj", "altyazi ekle"),
+    "U13": ("video analiz", "video izle", "videoyu izle", "videoyu incele", "videoyu analiz et"),
+    "U14": ("metin yaz", "aciklama yaz", "seo metni"),
+    "U15": ("sosyal medya", "instagram", "reklam"),
+    "U16": ("yayin planla", "paylasim takvimi", "zamanlama"),
+    "U17": ("veri analiz", "verilerini analiz", "excel", "istatistik"),
+    "U18": ("kalite kontrol", "son kontrol", "dogrula"),
+    "U19": ("rapor", "raporu hazirla", "ozet hazirla", "gunluk durum"),
+}
+
+def normalize(text):
+    text = text.casefold().replace("ı", "i")
+    text = unicodedata.normalize("NFKD", text)
+    text = "".join(c for c in text if not unicodedata.combining(c))
+    return re.sub(r"\s+", " ", text).strip()
+
+def yonlendir(gorev):
+    metin = normalize(gorev)
+    eslesmeler = []
+
+    for uzman in UZMANLAR:
+        anahtarlar = ANAHTARLAR.get(uzman.kod, ())
+        bulunanlar = [
+            kelime for kelime in anahtarlar
+            if normalize(kelime) in metin
+        ]
+        if bulunanlar:
+            puan = max(len(normalize(k)) for k in bulunanlar)
+            eslesmeler.append((puan, uzman, bulunanlar))
+
+    if not eslesmeler:
+        return None
+
+    eslesmeler.sort(key=lambda x: (-x[0], x[1].kod))
+    return eslesmeler[0][1]
+
+def test():
+    kadro_kontrol()
+
+    ornekler = [
+        ("GitHub depolarini arastir", "U02"),
+        ("Python kodundaki hatalari bul", "U05"),
+        ("Bu videoyu izle ve analiz et", "U13"),
+        ("Trendyol icin oyuncak urun gorseli hazirla", "U10"),
+        ("Instagram reklam stratejisi hazirla", "U15"),
+        ("Excel verilerini analiz et", "U17"),
+        ("Gunluk durum raporu hazirla", "U19"),
+    ]
+
+    for gorev, beklenen in ornekler:
+        uzman = yonlendir(gorev)
+        bulunan = uzman.kod if uzman else "YOK"
+        durum = "OK" if bulunan == beklenen else "HATA"
+        print(f"{durum}: {gorev} -> {bulunan}")
+        assert bulunan == beklenen, (
+            f"Beklenen {beklenen}, bulunan {bulunan}"
+        )
+
+    print("\n7/7 GOREV YONLENDIRME TESTI BASARILI")
+
+if __name__ == "__main__":
+    if len(sys.argv) > 1 and sys.argv[1] == "--test":
+        test()
+    elif len(sys.argv) > 1:
+        gorev = " ".join(sys.argv[1:])
+        uzman = yonlendir(gorev)
+        if uzman:
+            print(f"UZMAN: {uzman.kod} - {uzman.ad}")
+            print(f"ANA AJAN: {uzman.yonetici}")
+            print("DURUM: YONLENDIRILDI, CALISTIRILMADI")
+        else:
+            print("UZMAN SECILEMEDI - ANA AJAN INCELEMESI GEREKLI")
+    else:
+        print("Kullanim: python kado_uzman_yonlendirici.py --test")
+
+

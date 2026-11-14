@@ -1,0 +1,14 @@
+﻿# KADO teknoloji ve gundem taramasi (yalnizca basliklar, dogrulanmadi)
+- [Haber: oyuncak sektoru ebeveyn egitici oyuncak] Dijital Oyuncaklar Balıkesir’de Popülerleşiyor - Balıkesir Haberci Gazetesi - https://news.google.com/rss/articles/CBMikwFBVV95cUxNcTZkeURVLTdtcDZuVVhVU1NyMDZ2TnZiVGk1VktYcGI0SVMtUHRIU2dOZnl4R25oNGpldlo2SXBBcVZUdlJRTEFrejk3Q1FGeHV3clBMQloyX1M5ZU9GellhYWZ1ay1WS0FSNWgtM0lFMC1CclZRWnVnOFFTZU5EYl9aUElhc2lQcldyeG5LTm1uX2c?oc=5
+- [Haber: oyuncak sektoru ebeveyn egitici oyuncak] KOMEK’TEN “AHŞAP OYUNCAK ÇOCUK-EBEVEYN ATÖLYESİ” ETKİNLİĞİ - Konya Büyükşehir Belediyesi - https://news.google.com/rss/articles/CBMijwFBVV95cUxQS290eHBEaUo3UmpScG9fdHRPNDN6VUZqWjZlMVNYaFhwNnRFeFdveDI1WngzSmlQdGdzXzFVZS03d2Y0bGlCRG5EcnNzdmhMQ3J0TjhJUm5YTWl3b1ZEVVZsd1NQUVVYTnJCXzZ2U2RkbkZKWEM2b0FjYUhvS2NBUG5HMnBNeVRsLTcwSG1FNA?oc=5
+- [Haber: oyuncak sektoru ebeveyn egitici oyuncak] Bir Love Brand Yaratma Hikayesi: Isabel Abbey - Hürriyet - https://news.google.com/rss/articles/CBMijwFBVV95cUxNR3NDZy1lUHpibzZwVmlwMlBWeWZrellhTzJnOXBEQVJvOGdyaW9HV3dBamtDOUs1VzUzb21JTjNic0tkRFZkbmZkRVZvRmJXbEdhMlIwUi1HZFhkczdzUkNhM3Ntc2dQeW9BWXlIdWttMXc5eHYtRHJUaXhsNnhFVlliN2N4alVhRmJuV1JhRQ?oc=5
+- [Haber: virtual influencer Instagram TikTok creator AI] Instagram’da yeni dönem! Yapay zeka içeriklerine etiket zorunluluğu geliyor - GZT - https://news.google.com/rss/articles/CBMi1gFBVV95cUxPUnFsRWNiZEVYcHdyLXpUTmwxbjZBY05wd05sTHZKVHhWSDhwbTR1ZlV6Q1hmblllQzdEb2NjcHJuQXRBRDRFaEFlS3ZsMkpEcEkxYWp5UXEwZzNGbzlDLW1lS25aWGNPX0I4NzBReF9PYlJNd0NtUks0LXY3X0dBS2NKeng0RjRtSGNDVXkybGtnWTlBUnMxNzNwNXVCRWYxdmk3UUVLQ3lDRnJ1cGFSVl9rdzF3VDlYbHg0UFVIVExZNjl3M0F5QUJVZFVjMDN5NXZlQjR3?oc=5
+- [Surum: openclaw/openclaw] release-publish/68aff7f86414-1794520487 - https://github.com/openclaw/openclaw/releases/tag/release-publish%2F68aff7f86414-1794520487
+- [Surum: openclaw/openclaw] release-publish/fc9e1cd26eeb-1794479957: fix(release): keep direct npm recovery within request budget (#197689) - https://github.com/openclaw/openclaw/releases/tag/release-publish%2Ffc9e1cd26eeb-1794479957
+- [Surum: openclaw/openclaw] release-publish/17140700d7b5-1794431923: fix: keep parent npm authorization within request budget (#197336) - https://github.com/openclaw/openclaw/releases/tag/release-publish%2F17140700d7b5-1794431923
+- [Surum: Comfy-Org/ComfyUI] v0.45.3 - https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.45.3
+- [Surum: Comfy-Org/ComfyUI] v0.45.2 - https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.45.2
+- [Surum: Comfy-Org/ComfyUI] v0.45.1 - https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.45.1
+- [Surum: langchain-ai/langgraph] langgraph==1.2.21 - https://github.com/langchain-ai/langgraph/releases/tag/1.2.21
+- [Surum: langchain-ai/langgraph] langgraph-cli==0.4.43 - https://github.com/langchain-ai/langgraph/releases/tag/cli%3D%3D0.4.43
+- [Surum: langchain-ai/langgraph] langgraph-sdk==0.4.14 - https://github.com/langchain-ai/langgraph/releases/tag/sdk%3D%3D0.4.14

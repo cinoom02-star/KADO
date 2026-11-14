@@ -1,0 +1,1 @@
+module.exports = {"skipDownload":true,"executablePath":"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"};

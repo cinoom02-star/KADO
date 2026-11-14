@@ -1,0 +1,38 @@
+services:
+  company:
+    build: .
+    ports:
+      - "127.0.0.1:8765:8765"
+    environment:
+      KADO_DATA_DIR: /app/data
+      KADO_WORKSPACE_ROOT: /app/data/workspace
+      KADO_API_TOKEN: ${KADO_API_TOKEN:-}
+      DATABASE_URL: ${DATABASE_URL:-sqlite:////app/data/company.sqlite3}
+      MODEL_PROVIDER: ${MODEL_PROVIDER:-unconfigured}
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-2.5-flash}
+      KADO_WORKER_CONCURRENCY: ${KADO_WORKER_CONCURRENCY:-1}
+    volumes:
+      - company_data:/app/data
+    restart: unless-stopped
+  db:
+    image: postgres:16-alpine
+    profiles: [postgres]
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-kado_company}
+      POSTGRES_USER: ${POSTGRES_USER:-kado_company}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-}
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+volumes:
+  company_data:
+  postgres_data:

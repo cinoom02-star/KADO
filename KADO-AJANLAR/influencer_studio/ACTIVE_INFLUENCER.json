@@ -1,0 +1,22 @@
+﻿{
+    "active_profile":  "Emine",
+    "updated_at":  "2026-11-13T11:47:45",
+    "role":  "virtual_influencer",
+    "status":  "active",
+    "display_name":  "Emine",
+    "identity_rules":  [
+                           "Yuz genel olarak bu referansa sadik kalacak",
+                           "Yanakta kucuk siyah nokta/ben olacak",
+                           "Dogal, modern, sicak ve estetik gorunum korunacak",
+                           "Farkli kiyafet, farkli mekan, farkli poz olabilir",
+                           "Kimlik tutarliligi korunacak"
+                       ],
+    "files":  {
+                  "reference_image":  "C:\\KADO\\KADO-AJANLAR\\influencer_studio\\profiles\\Emine\\Emine_ANA_REFERANS.png",
+                  "cover_image":  "C:\\KADO\\KADO-AJANLAR\\influencer_studio\\profiles\\Emine\\Emine_REELS_KAPAK.jpg",
+                  "sample_video":  "C:\\KADO\\KADO-AJANLAR\\influencer_studio\\profiles\\Emine\\Emine_ILK_REELS_ONIZLEME.mp4",
+                  "background_audio":  "C:\\KADO\\KADO-AJANLAR\\influencer_studio\\profiles\\Emine\\Emine_ORIJINAL_FON.wav",
+                  "production_json":  "C:\\KADO\\KADO-AJANLAR\\influencer_studio\\profiles\\Emine\\KADO_EMINE_URETIM_VE_DENETIM.json",
+                  "guide_text":  "C:\\KADO\\KADO-AJANLAR\\influencer_studio\\profiles\\Emine\\SES_METNI_VE_ADIMLAR.txt"
+              }
+}

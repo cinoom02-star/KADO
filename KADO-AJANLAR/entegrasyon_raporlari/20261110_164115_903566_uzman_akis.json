@@ -1,0 +1,68 @@
+{
+  "job": "C:\\KADO\\KADO-AJANLAR\\kado_agent_motor\\ciktilar\\20261110_164115_903566",
+  "timestamp": "2026-11-10T13:41:35.803141+00:00",
+  "initial": {
+    "gorev": "20261110_164115_903566",
+    "time": "2026-11-10T13:41:35.786897+00:00",
+    "uzmanlar": {
+      "U05": {
+        "durum": "GECTI",
+        "aciklama": "AST sozdizimi gecerli"
+      },
+      "U06": {
+        "durum": "GECTI",
+        "aciklama": "SOZDIZIMI GECERLI"
+      },
+      "U07": {
+        "durum": "ON_KONTROL_GECTI",
+        "bulgular": []
+      },
+      "U18": {
+        "durum": "SINIRLI_STATIK_KONTROL",
+        "satir": 2,
+        "fonksiyon": 1
+      },
+      "U19": {
+        "durum": "RAPOR_HAZIR"
+      }
+    },
+    "karar": "STATIK_KONTROL_GECTI_TEST_GEREKLI"
+  },
+  "changes": [],
+  "after": {
+    "gorev": "20261110_164115_903566",
+    "time": "2026-11-10T13:41:35.786897+00:00",
+    "uzmanlar": {
+      "U05": {
+        "durum": "GECTI",
+        "aciklama": "AST sozdizimi gecerli"
+      },
+      "U06": {
+        "durum": "GECTI",
+        "aciklama": "SOZDIZIMI GECERLI"
+      },
+      "U07": {
+        "durum": "ON_KONTROL_GECTI",
+        "bulgular": []
+      },
+      "U18": {
+        "durum": "SINIRLI_STATIK_KONTROL",
+        "satir": 2,
+        "fonksiyon": 1
+      },
+      "U19": {
+        "durum": "RAPOR_HAZIR"
+      }
+    },
+    "karar": "STATIK_KONTROL_GECTI_TEST_GEREKLI"
+  },
+  "decision": "STATIK_KONTROL_GECTI_DAVRANIS_TESTI_GEREKLI",
+  "candidate": null,
+  "limitations": [
+    "Only known console clear repair is automated",
+    "No generated code executed",
+    "U04 model-based repair not connected",
+    "U06 checks syntax, not behavior",
+    "Static checks cannot establish security"
+  ]
+}

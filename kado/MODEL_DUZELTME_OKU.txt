@@ -1,0 +1,3 @@
+Kado WhatsApp penceresini kapatin. ZIP dosyasini BASLAT.bat bulunan kado klasorune ayiklayin. sistem/whatsapp_kado/worker.py degistirilsin. WHATSAPP_BASLAT.bat dosyasini yeniden acin.
+Ayarlar, QR oturumu ve tarayici ayarlarina dokunulmaz.
+Hafif metin modeli secimi duzeltildi. Model kullanilamazsa en fazla uc model denenir. Calisan model oturum boyunca korunur. Kota hatasi kalirsa model ve kota kimligi pencerede gorunur. Bu guncelleme servis kotalarini arttirmaz.

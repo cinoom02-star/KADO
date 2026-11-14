@@ -1,0 +1,156 @@
+{
+  "tarih_utc": "2026-11-10T12:52:32.078904+00:00",
+  "gorevler": [
+    {
+      "id": 1,
+      "baslik": "Basit çocuk oyunu için MVP planı",
+      "tur": "oyun_mvp",
+      "yonetici": "MIMAR",
+      "uzmanlar": [
+        {
+          "uzman": "U04",
+          "dosya": "kado_kod_ekibi_v2.py",
+          "durum": "fonksiyon_mevcut",
+          "fonksiyonlar": [
+            "u04_duzeltme_oner"
+          ]
+        },
+        {
+          "uzman": "U06",
+          "dosya": "kado_kod_ekibi_v2.py",
+          "durum": "fonksiyon_mevcut",
+          "fonksiyonlar": [
+            "u06_dogrula"
+          ]
+        },
+        {
+          "uzman": "U18",
+          "dosya": "kado_guvenlik_kalite.py",
+          "durum": "fonksiyon_mevcut",
+          "fonksiyonlar": [
+            "GuvenlikDenetcisi"
+          ]
+        }
+      ],
+      "gereken_yetenekler": [
+        "Oyun gereksinimlerini belirleme",
+        "Oynanabilir prototip uretme",
+        "Uygulama testleri"
+      ],
+      "uctan_uca_dogrulandi": false
+    },
+    {
+      "id": 2,
+      "baslik": "KADO sesli ajan sistemi test gorevi",
+      "tur": "sesli_ajan_testi",
+      "yonetici": "MIMAR",
+      "uzmanlar": [
+        {
+          "uzman": "U05",
+          "dosya": "kado_kod_denetcisi.py",
+          "durum": "fonksiyon_eslesmesi_tanimlanmamis",
+          "fonksiyonlar": []
+        },
+        {
+          "uzman": "U06",
+          "dosya": "kado_kod_ekibi_v2.py",
+          "durum": "fonksiyon_mevcut",
+          "fonksiyonlar": [
+            "u06_dogrula"
+          ]
+        },
+        {
+          "uzman": "U07",
+          "dosya": "kado_guvenlik_kalite.py",
+          "durum": "fonksiyon_mevcut",
+          "fonksiyonlar": [
+            "GuvenlikDenetcisi"
+          ]
+        }
+      ],
+      "gereken_yetenekler": [
+        "Ses giris cikis testi",
+        "Gecikme olcumu",
+        "WhatsApp ses koprusu dogrulamasi"
+      ],
+      "uctan_uca_dogrulandi": false
+    },
+    {
+      "id": 3,
+      "baslik": "Mobil Uygulama Fikirleri Araştırması",
+      "tur": "uygulama_fikirleri",
+      "yonetici": "ARASTIRMACI",
+      "uzmanlar": [
+        {
+          "uzman": "U01",
+          "dosya": "kado_arastirma_ekibi.py",
+          "durum": "fonksiyon_mevcut",
+          "fonksiyonlar": [
+            "github_bilgi"
+          ]
+        },
+        {
+          "uzman": "U03",
+          "dosya": "kado_arastirma_ekibi.py",
+          "durum": "fonksiyon_mevcut",
+          "fonksiyonlar": [
+            "github_bilgi"
+          ]
+        },
+        {
+          "uzman": "U17",
+          "dosya": "kado_veri_raporlama.py",
+          "durum": "fonksiyon_mevcut",
+          "fonksiyonlar": [
+            "analiz_ve_rapor"
+          ]
+        }
+      ],
+      "gereken_yetenekler": [
+        "Canli pazar arastirmasi",
+        "Rakip analizi",
+        "Talep ve gelir potansiyeli degerlendirmesi"
+      ],
+      "uctan_uca_dogrulandi": false
+    },
+    {
+      "id": 4,
+      "baslik": "KVKK Resmi Site Araştırması",
+      "tur": "kvkk_arastirmasi",
+      "yonetici": "ARASTIRMACI",
+      "uzmanlar": [
+        {
+          "uzman": "U01",
+          "dosya": "kado_arastirma_ekibi.py",
+          "durum": "fonksiyon_mevcut",
+          "fonksiyonlar": [
+            "github_bilgi"
+          ]
+        },
+        {
+          "uzman": "U07",
+          "dosya": "kado_guvenlik_kalite.py",
+          "durum": "fonksiyon_mevcut",
+          "fonksiyonlar": [
+            "GuvenlikDenetcisi"
+          ]
+        },
+        {
+          "uzman": "U19",
+          "dosya": "kado_veri_raporlama.py",
+          "durum": "fonksiyon_mevcut",
+          "fonksiyonlar": [
+            "analiz_ve_rapor"
+          ]
+        }
+      ],
+      "gereken_yetenekler": [
+        "Resmi mevzuat kaynagi okuma",
+        "Kaynak ve tarih dogrulama",
+        "Hukuki belirsizlikleri raporlama"
+      ],
+      "uctan_uca_dogrulandi": false
+    }
+  ],
+  "not": "Fonksiyon varligi gercek gorev yeterliligini veya basarili calismayi kanitlamaz."
+}

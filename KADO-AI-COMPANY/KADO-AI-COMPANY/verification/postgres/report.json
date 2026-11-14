@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "workspace_path": ".",
+  "files": [
+    {
+      "path": "proof.txt",
+      "size": 40,
+      "sha256": "5c48f99e12de78ed590ea5d1120fc88b7465a413b3338214bf2f44df237424ce"
+    }
+  ],
+  "file_count": 1,
+  "total_bytes": 40,
+  "excluded": [],
+  "scope_note": "Yalnızca izinli, boyut sınırındaki dosyalar; güvenlik ve kod kalitesi analizi değildir."
+}

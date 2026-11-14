@@ -1,0 +1,78 @@
+{
+  "job": "C:\\KADO\\KADO-AJANLAR\\kado_agent_motor\\ciktilar\\20261110_160622_73ff50",
+  "timestamp": "2026-11-10T13:30:59.899666+00:00",
+  "initial": {
+    "gorev": "20261110_160622_73ff50",
+    "time": "2026-11-10T13:30:59.886667+00:00",
+    "uzmanlar": {
+      "U05": {
+        "durum": "GECTI",
+        "aciklama": "AST sozdizimi gecerli"
+      },
+      "U06": {
+        "durum": "GECTI",
+        "aciklama": "SOZDIZIMI GECERLI"
+      },
+      "U07": {
+        "durum": "INCELEME",
+        "bulgular": [
+          [
+            6,
+            "Komut calistirma incelemesi gerekli: os.system"
+          ]
+        ]
+      },
+      "U18": {
+        "durum": "SINIRLI_STATIK_KONTROL",
+        "satir": 31,
+        "fonksiyon": 1
+      },
+      "U19": {
+        "durum": "RAPOR_HAZIR"
+      }
+    },
+    "karar": "INCELEME_GEREKLI"
+  },
+  "changes": [
+    {
+      "line": 6,
+      "action": "remove_known_console_clear"
+    }
+  ],
+  "after": {
+    "gorev": "kado_audit_wb1yq089",
+    "time": "2026-11-10T13:30:59.896668+00:00",
+    "uzmanlar": {
+      "U05": {
+        "durum": "GECTI",
+        "aciklama": "AST sozdizimi gecerli"
+      },
+      "U06": {
+        "durum": "GECTI",
+        "aciklama": "SOZDIZIMI GECERLI"
+      },
+      "U07": {
+        "durum": "ON_KONTROL_GECTI",
+        "bulgular": []
+      },
+      "U18": {
+        "durum": "SINIRLI_STATIK_KONTROL",
+        "satir": 31,
+        "fonksiyon": 1
+      },
+      "U19": {
+        "durum": "RAPOR_HAZIR"
+      }
+    },
+    "karar": "STATIK_KONTROL_GECTI_TEST_GEREKLI"
+  },
+  "decision": "STATIK_KONTROL_GECTI_DAVRANIS_TESTI_GEREKLI",
+  "candidate": "C:\\KADO\\KADO-AJANLAR\\entegrasyon_raporlari\\20261110_160622_73ff50_duzeltilmis_aday.py",
+  "limitations": [
+    "Only known console clear repair is automated",
+    "No generated code executed",
+    "U04 model-based repair not connected",
+    "U06 checks syntax, not behavior",
+    "Static checks cannot establish security"
+  ]
+}

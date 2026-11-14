@@ -1,0 +1,22 @@
+[project]
+name = "kado-ai-company"
+version = "0.1.0"
+description = "Existing KADO's local-first agent execution infrastructure"
+requires-python = ">=3.12"
+dynamic = ["dependencies"]
+
+[tool.pytest.ini_options]
+pythonpath = ["backend", "."]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+where = ["backend", "."]
+include = ["company*", "kado_bridge*"]
+
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"

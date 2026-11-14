@@ -1,0 +1,139 @@
+[
+  {
+    "id": "7c4a3823-6925-470e-851d-0ffb63a74a52",
+    "task_id": "c7cbd530-c3ba-46f4-8d80-02f95d3b28be",
+    "agent_id": "quality_auditor",
+    "tool": "audit_report",
+    "args": {
+      "task_id": "c7cbd530-c3ba-46f4-8d80-02f95d3b28be"
+    },
+    "result": {
+      "passed": true,
+      "checks": [
+        {
+          "name": "schema",
+          "passed": true
+        },
+        {
+          "name": "scope",
+          "passed": true
+        },
+        {
+          "name": "hashes_sizes_and_paths",
+          "passed": true
+        },
+        {
+          "name": "file_count",
+          "passed": true
+        },
+        {
+          "name": "total_bytes",
+          "passed": true
+        },
+        {
+          "name": "exclusions_disclosed",
+          "passed": true
+        }
+      ],
+      "report_sha256": "156bf625c5365d36b426bd8d80c3847ac10140fab2c42608b1b6e22a6e75ad75",
+      "verified_file_count": 1,
+      "reason": "Dosya kanıtları bağımsız yeniden hesaplandı"
+    },
+    "status": "SUCCEEDED",
+    "error": null,
+    "created_at": "2026-11-13T13:00:42.536104+00:00",
+    "name": "audit_report"
+  },
+  {
+    "id": "19dc5ddf-fd49-4a25-a644-21891766879f",
+    "task_id": "c7cbd530-c3ba-46f4-8d80-02f95d3b28be",
+    "agent_id": "qa_engineer",
+    "tool": "verify_report",
+    "args": {
+      "task_id": "c7cbd530-c3ba-46f4-8d80-02f95d3b28be"
+    },
+    "result": {
+      "passed": true,
+      "checks": [
+        {
+          "name": "schema",
+          "passed": true
+        },
+        {
+          "name": "scope",
+          "passed": true
+        },
+        {
+          "name": "hashes_sizes_and_paths",
+          "passed": true
+        },
+        {
+          "name": "file_count",
+          "passed": true
+        },
+        {
+          "name": "total_bytes",
+          "passed": true
+        },
+        {
+          "name": "exclusions_disclosed",
+          "passed": true
+        }
+      ],
+      "report_sha256": "156bf625c5365d36b426bd8d80c3847ac10140fab2c42608b1b6e22a6e75ad75",
+      "verified_file_count": 1,
+      "reason": "Dosya kanıtları bağımsız yeniden hesaplandı"
+    },
+    "status": "SUCCEEDED",
+    "error": null,
+    "created_at": "2026-11-13T13:00:42.526160+00:00",
+    "name": "verify_report"
+  },
+  {
+    "id": "9748afd5-0de5-4382-bee6-0494b65a968c",
+    "task_id": "c7cbd530-c3ba-46f4-8d80-02f95d3b28be",
+    "agent_id": "senior_fullstack",
+    "tool": "write_report",
+    "args": {
+      "name": "report.json"
+    },
+    "result": {
+      "path": "/tmp/kado-live-t0shi6ep/data/artifacts/c7cbd530-c3ba-46f4-8d80-02f95d3b28be/report.json",
+      "name": "report.json",
+      "sha256": "156bf625c5365d36b426bd8d80c3847ac10140fab2c42608b1b6e22a6e75ad75",
+      "bytes": 379
+    },
+    "status": "SUCCEEDED",
+    "error": null,
+    "created_at": "2026-11-13T13:00:42.518059+00:00",
+    "name": "write_report"
+  },
+  {
+    "id": "c95b79b6-ed6c-4ce0-816b-7f5646240a07",
+    "task_id": "c7cbd530-c3ba-46f4-8d80-02f95d3b28be",
+    "agent_id": "senior_fullstack",
+    "tool": "workspace_inventory",
+    "args": {
+      "path": "."
+    },
+    "result": {
+      "schema_version": 1,
+      "workspace_path": ".",
+      "files": [
+        {
+          "path": "proof.txt",
+          "size": 40,
+          "sha256": "5c48f99e12de78ed590ea5d1120fc88b7465a413b3338214bf2f44df237424ce"
+        }
+      ],
+      "file_count": 1,
+      "total_bytes": 40,
+      "excluded": [],
+      "scope_note": "Yalnızca izinli, boyut sınırındaki dosyalar; güvenlik ve kod kalitesi analizi değildir."
+    },
+    "status": "SUCCEEDED",
+    "error": null,
+    "created_at": "2026-11-13T13:00:42.511428+00:00",
+    "name": "workspace_inventory"
+  }
+]

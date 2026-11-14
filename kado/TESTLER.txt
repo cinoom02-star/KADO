@@ -1,0 +1,3 @@
+Yerel dogrulama: 11 Python host/worker testi; 4 PCM feeder testi; 6 mevcut mesaj filtresi testi; 2 mesaj/arama baglanti entegrasyon testi.
+Arama WebSocket entegrasyon testinde gercek yerel ag baglantisi ve PCM kullanildi, WhatsApp/WASM yerine test surucusu kullanildi.
+Gercek Windows/Ubuntu, Google Live ve ElevenLabs servisleriyle bu yeni entegrasyon bu ortamda calistirilmadi.

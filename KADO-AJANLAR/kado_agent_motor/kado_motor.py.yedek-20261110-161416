@@ -1,0 +1,78 @@
+"""KADO independent local job worker. No production integration, no posting."""
+import argparse, ast, datetime, json, os, pathlib, re, subprocess, time, urllib.request, uuid
+BASE=pathlib.Path(__file__).resolve().parent
+QUEUE=BASE/'kuyruk'; OUT=BASE/'ciktilar'; LOG=BASE/'gunluk.jsonl'
+for p in (QUEUE,OUT): p.mkdir(parents=True,exist_ok=True)
+def log(event,**kwargs):
+    with LOG.open('a',encoding='utf-8') as f:f.write(json.dumps({'time':datetime.datetime.now().isoformat(timespec='seconds'),'event':event,**kwargs},ensure_ascii=False)+'\n')
+def ask_model(prompt):
+    endpoint=os.getenv('KADO_OLLAMA_URL','http://127.0.0.1:11434/api/generate')
+    payload=json.dumps({'model':os.getenv('KADO_MODEL','qwen2.5:3b'),'prompt':prompt,'stream':False,'options':{'num_thread':2,'num_ctx':2048,'num_predict':650}}).encode()
+    req=urllib.request.Request(endpoint,data=payload,headers={'Content-Type':'application/json'})
+    with urllib.request.urlopen(req,timeout=180) as r:return json.load(r)['response'].strip()
+def safe_filename(name):
+    name=re.sub(r'[^a-zA-Z0-9_.-]','_',name).strip('._')
+    return name[:70] or 'output'
+def extract_code(text):
+    match=re.search(r'```(?:python)?\s*\n(.*?)```',text,re.S|re.I)
+    return match.group(1).strip() if match else text.strip()
+def execute(job):
+    jid=job['id']; kind=job['kind']; goal=job['goal']; dest=OUT/jid;dest.mkdir(exist_ok=True)
+    log('start',id=jid,kind=kind)
+    if kind=='kod':
+        raw=ask_model('Sen KADO kod yazari uzmansin. Tek bir CALISABILIR Python 3 dosyasi yaz. Harici kutuphane kullanma. Ag erisimi, subprocess, dosya silme, credential veya gizli veri kullanma. Yalnizca ```python kod blogu dondur. Gorev: '+goal)
+        code=extract_code(raw)
+        (dest/'model_yanit.txt').write_text(raw,encoding='utf-8')
+        try:ast.parse(code)
+        except SyntaxError as e:
+            (dest/'HATA.txt').write_text(f'Sozdizimi hatasi: {e}',encoding='utf-8'); log('test_failed',id=jid,error=str(e));return
+        # Never execute generated code; static syntax test only.
+        (dest/'uygulama.py').write_text(code+'\n',encoding='utf-8')
+        (dest/'TEST_SONUCU.txt').write_text('Python AST sozdizimi BASARILI. Kod CALISTIRILMADI; davranis ve guvenlik dogrulanmadi.',encoding='utf-8')
+    elif kind=='paylasim':
+        draft=ask_model('Sen KADO sosyal medya uzmansin. Turkce, dogrulanamayan iddia icermeyen Instagram icin bir paylasim metni, baslik, 5 hashtag ve kisa gorsel briefi olustur. Yalnizca taslak hazirla, yayinlama. Konu: '+goal)
+        (dest/'YAYIN_ONAYI_GEREKLI.txt').write_text('Taslak hazir. Herhangi bir platforma otomatik gonderilmedi. Yayin icin kullanici onayi ve platform baglantisi gerekir.',encoding='utf-8')
+        (dest/'paylasim_taslagi.txt').write_text(draft,encoding='utf-8')
+    elif kind=='arastirma':
+        draft=ask_model('Sen KADO arastirma uzmansin. Bu konuda sadece genel bilgi ve arastirma plani ver. Canli web arastirmasi yapmadigini belirt; kaynak veya gercek zamanli veri uydurma. Gorev: '+goal)
+        (dest/'arastirma_taslagi.txt').write_text(draft,encoding='utf-8')
+    else:raise ValueError('Desteklenmeyen gorev turu')
+    (dest/'OZET.txt').write_text(f'KADO gorev {jid}\nTur: {kind}\nIstek: {goal}\nCikti: {dest}\n',encoding='utf-8')
+    log('completed',id=jid,output=str(dest))
+def submit(kind,goal):
+    if kind not in ('kod','paylasim','arastirma'):raise ValueError('Tur: kod, paylasim veya arastirma')
+    jid=datetime.datetime.now().strftime('%Y%m%d_%H%M%S')+'_'+uuid.uuid4().hex[:6]
+    p=QUEUE/(jid+'.json');p.write_text(json.dumps({'id':jid,'kind':kind,'goal':goal},ensure_ascii=False),encoding='utf-8');print('Gorev eklendi:',jid)
+def tick():
+    for p in sorted(QUEUE.glob('*.json')):
+        working=p.with_suffix('.working')
+        try:p.rename(working)
+        except OSError:continue
+        try:
+            job=json.loads(working.read_text(encoding='utf-8'))
+            execute(job)
+            working.rename(working.with_suffix('.done'))
+        except Exception as e:
+            log('failed',file=working.name,error=str(e)[:250])
+            print('Gorev basarisiz:',str(e)[:200]);working.rename(working.with_suffix('.failed'))
+        return True
+    return False
+def main():
+    ap=argparse.ArgumentParser();sub=ap.add_subparsers(dest='cmd',required=True)
+    s=sub.add_parser('ekle');s.add_argument('kind',choices=['kod','paylasim','arastirma']);s.add_argument('goal')
+    sub.add_parser('birkez');r=sub.add_parser('calis');r.add_argument('--bekleme',type=int,default=15)
+    sub.add_parser('durum')
+    a=ap.parse_args()
+    if a.cmd=='ekle':submit(a.kind,a.goal)
+    elif a.cmd=='birkez':print('Islendi' if tick() else 'Bekleyen gorev yok')
+    elif a.cmd=='calis':
+        print('KADO motor calisiyor. Durdurmak icin Ctrl+C. Yeni gorevler kuyruga eklenebilir.')
+        try:
+            while True:
+                if not tick():time.sleep(max(3,a.bekleme))
+        except KeyboardInterrupt:print('Motor durduruldu')
+    else:
+        for suffix in ('.json','.working','.done','.failed'):
+            print(suffix, len(list(QUEUE.glob('*'+suffix))))
+        print('Ciktilar:',OUT)
+if __name__=='__main__':main()

@@ -1,0 +1,21 @@
+İşte, isteğinize göre iki sayının toplamını bulan `topla(a, b)` Python fonksiyonunu oluşturduk:
+
+```python
+import os
+import subprocess
+import ag
+import os
+import subprocess
+
+def topla(a, b):
+    return a + b
+```
+
+Bu fonksiyon, verilen iki parametreden oluşan (`a` ve `b`) bir sayıların toplamını döndürür. Ancak, isteğinize göre kullanmak istemediğiniz bazı kütüphaneleri ve modüller (örneğin, `os`, `subprocess`, `ag`) içeriyordu. Bu fonksiyonun doğru çalışmasını sağlamak için sadece `os` ve `subprocess` kütüphanelerini kaldırabiliriz:
+
+```python
+def topla(a, b):
+    return a + b
+```
+
+Bu şekilde, `topla` fonksiyonu sadece işini yapmayı amaçlayan `a` ve `b` değişkenlerini toplamak için yazılmış olur.

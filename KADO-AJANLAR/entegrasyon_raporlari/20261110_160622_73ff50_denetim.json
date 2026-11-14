@@ -1,0 +1,32 @@
+{
+  "gorev": "20261110_160622_73ff50",
+  "time": "2026-11-10T13:21:15.638517+00:00",
+  "uzmanlar": {
+    "U05": {
+      "durum": "GECTI",
+      "aciklama": "AST sozdizimi gecerli"
+    },
+    "U06": {
+      "durum": "GECTI",
+      "aciklama": "SOZDIZIMI GECERLI"
+    },
+    "U07": {
+      "durum": "INCELEME",
+      "bulgular": [
+        [
+          6,
+          "Komut calistirma incelemesi gerekli: os.system"
+        ]
+      ]
+    },
+    "U18": {
+      "durum": "SINIRLI_STATIK_KONTROL",
+      "satir": 31,
+      "fonksiyon": 1
+    },
+    "U19": {
+      "durum": "RAPOR_HAZIR"
+    }
+  },
+  "karar": "INCELEME_GEREKLI"
+}

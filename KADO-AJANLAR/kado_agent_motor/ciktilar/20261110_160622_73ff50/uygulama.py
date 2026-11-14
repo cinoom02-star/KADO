@@ -1,0 +1,31 @@
+import subprocess
+import os
+import random
+
+def run_game():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("Basarı ile basladık. Sayıyı tahmin etmeye calisacaksin...")
+    secret_number = random.randint(1, 100)
+    attempts = 0
+
+    while True:
+        try:
+            guess = int(input("Lutfen bir tamsayı girin (1-100): "))
+        except ValueError:
+            print("Lutfen sadece tamsayı girin!")
+            continue
+
+        attempts += 1
+
+        if guess < 1 or guess > 100:
+            print("Sayıyı 1 ile 100 arasından giriniz!")
+        elif guess < secret_number:
+            print("Sayı Kod Satırına Kadar Küçük")
+        elif guess > secret_number:
+            print("Sayı Kod Satırına Katıştır!")
+        else:
+            print(f"Tebrikler, sayiyi {attempts} deneme sonunda buldunuz!")
+            break
+
+if __name__ == "__main__":
+    run_game()

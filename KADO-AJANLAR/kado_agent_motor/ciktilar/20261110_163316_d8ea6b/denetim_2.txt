@@ -1,0 +1,1 @@
+Kontrol: RED\nRiskli import: os\nRiskli import: subprocess\nBu otomatik kontrol tam guvenlik/dil dogrulamasi degildir.\n

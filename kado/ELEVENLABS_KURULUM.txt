@@ -1,0 +1,21 @@
+KADO - ElevenLabs sesi
+======================
+1) ElevenLabs > Developers/API Keys bolumunden bir API anahtari olustur.
+2) Kullanmak istedigin sesin "Voice ID" degerini kopyala
+   (ElevenLabs > Voices > sesin yanindaki ID dugmesi).
+3) sistem/config/api_keys.json dosyasini ac ve su iki satiri doldur:
+     "elevenlabs_api_key": "BURAYA_ANAHTAR",
+     "elevenlabs_voice_id": "BURAYA_VOICE_ID",
+4) KADO'yu yeniden baslat. Artik Gemini'nin sesi yerine bu sesle konusur.
+
+Notlar:
+- Bos birakirsan eskisi gibi Gemini'nin hazir sesleri kullanilir.
+- ElevenLabs hata verirse (kota bitti vb.) KADO ekrana hata yazar ve
+  Windows sesiyle devam eder.
+- Model varsayilani eleven_flash_v2_5 (hizli, ucuz, Turkce destekli).
+  Daha kaliteli ama pahali olan: eleven_multilingual_v2
+- Bu ayar masaustu penceresi icindir; telefon paneli ayrica calisir.
+
+LISANS: Bu proje Alp Unlu'nun Jarvis'inden turetilmistir ve
+PolyForm Noncommercial 1.0.0 lisansi altindadir (LICENSE.md).
+Kisisel/ticari olmayan kullanim serbesttir.

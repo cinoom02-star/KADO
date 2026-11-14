@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "task_id": "95d99c0b-b159-4524-a64a-57d2eb43838c",
+    "type": "task.created",
+    "agent_id": null,
+    "payload": {
+      "kind": "workspace_audit",
+      "title": "HTTP ile gerçek dosya kanıtı"
+    },
+    "created_at": "2026-11-13T13:00:48.579031+00:00"
+  },
+  {
+    "id": 2,
+    "task_id": "95d99c0b-b159-4524-a64a-57d2eb43838c",
+    "type": "task.planning",
+    "agent_id": "kado",
+    "payload": {
+      "kind": "workspace_audit",
+      "mode": "explicit_workflow_template",
+      "note": "CEO KADO'nun verdiği görev; yeni CEO modeli oluşturulmaz"
+    },
+    "created_at": "2026-11-13T13:00:48.590091+00:00"
+  },
+  {
+    "id": 3,
+    "task_id": "95d99c0b-b159-4524-a64a-57d2eb43838c",
+    "type": "task.assigned",
+    "agent_id": "cto",
+    "payload": {
+      "from_agent_id": "kado",
+      "to_agent_id": "cto",
+      "purpose": "Dosya envanteri işini yazılım departmanına aktar"
+    },
+    "created_at": "2026-11-13T13:00:48.600041+00:00"
+  },
+  {
+    "id": 4,
+    "task_id": "95d99c0b-b159-4524-a64a-57d2eb43838c",
+    "type": "task.assigned",
+    "agent_id": "senior_fullstack",
+    "payload": {
+      "from_agent_id": "cto",
+      "to_agent_id": "senior_fullstack",
+      "purpose": "İzinli proje dosyalarının gerçek envanterini üret"
+    },
+    "created_at": "2026-11-13T13:00:48.604083+00:00"
+  },
+  {
+    "id": 5,
+    "task_id": "95d99c0b-b159-4524-a64a-57d2eb43838c",
+    "type": "task.status",
+    "agent_id": null,
+    "payload": {
+      "status": "IN_PROGRESS"
+    },
+    "created_at": "2026-11-13T13:00:48.608501+00:00"
+  },
+  {
+    "id": 6,
+    "task_id": "95d99c0b-b159-4524-a64a-57d2eb43838c",
+    "type": "tool.started",
+    "agent_id": "senior_fullstack",
+    "payload": {
+      "name": "workspace_inventory",
+      "args": {
+        "path": "."
+      }
+    },
+    "created_at": "2026-11-13T13:00:48.609941+00:00"
+  },
+  {
+    "id": 7,
+    "task_id": "95d99c0b-b159-4524-a64a-57d2eb43838c",
+    "type": "tool.completed",
+    "agent_id": "senior_fullstack",
+    "payload": {
+      "name": "workspace_inventory",
+      "status": "SUCCEEDED"
+    },
+    "created_at": "2026-11-13T13:00:48.620471+00:00"
+  },
+  {
+    "id": 8,
+    "task_id": "95d99c0b-b159-4524-a64a-57d2eb43838c",
+    "type": "tool.started",
+    "agent_id": "senior_fullstack",
+    "payload": {
+      "name": "write_report",
+      "args": {
+        "name": "report.json"
+      }
+    },
+    "created_at": "2026-11-13T13:00:48.623046+00:00"
+  },
+  {
+    "id": 9,
+    "task_id": "95d99c0b-b159-4524-a64a-57d2eb43838c",
+    "type": "tool.completed",
+    "agent_id": "senior_fullstack",
+    "payload": {
+      "name": "write_report",
+      "status": "SUCCEEDED"
+    },
+    "created_at": "2026-11-13T13:00:48.630366+00:00"
+  },
+  {
+    "id": 10,
+    "task_id": "95d99c0b-b159-4524-a64a-57d2eb43838c",
+    "type": "task.assigned",
+    "agent_id": "qa_engineer",
+    "payload": {
+      "from_agent_id": "cto",
+      "to_agent_id": "qa_engineer",
+      "purpose": "Raporu diskteki dosyalarla karşılaştır"
+    },
+    "created_at": "2026-11-13T13:00:48.635343+00:00"
+  },
+  {
+    "id": 11,
+    "task_id": "95d99c0b-b159-4524-a64a-57d2eb43838c",
+    "type": "task.status",
+    "agent_id": null,
+    "payload": {
+      "status": "REVIEW"
+    },
+    "created_at": "2026-11-13T13:00:48.640669+00:00"
+  },
+  {
+    "id": 12,
+    "task_id": "95d99c0b-b159-4524-a64a-57d2eb43838c",
+    "type": "tool.started",
+    "agent_id": "qa_engineer",
+    "payload": {
+      "name": "verify_report",
+      "args": {
+        "task_id": "95d99c0b-b159-4524-a64a-57d2eb43838c"
+      }
+    },
+    "created_at": "2026-11-13T13:00:48.641839+00:00"
+  },
+  {
+    "id": 13,
+    "task_id": "95d99c0b-b159-4524-a64a-57d2eb43838c",
+    "type": "tool.completed",
+    "agent_id": "qa_engineer",
+    "payload": {
+      "name": "verify_report",
+      "status": "SUCCEEDED"
+    },
+    "created_at": "2026-11-13T13:00:48.650308+00:00"
+  },
+  {
+    "id": 14,
+    "task_id": "95d99c0b-b159-4524-a64a-57d2eb43838c",
+    "type": "review.completed",
+    "agent_id": "qa_engineer",
+    "payload": {
+      "stage": "qa",
+      "passed": true,
+      "checks": [
+        {
+          "name": "schema",
+          "passed": true
+        },
+        {
+          "name": "scope",
+          "passed": true
+        },
+        {
+          "name": "hashes_sizes_and_paths",
+          "passed": true
+        },
+        {
+          "name": "file_count",
+          "passed": true
+        },
+        {
+          "name": "total_bytes",
+          "passed": true
+        },
+        {
+          "name": "exclusions_disclosed",
+          "passed": true
+        }
+      ],
+      "report_sha256": "156bf625c5365d36b426bd8d80c3847ac10140fab2c42608b1b6e22a6e75ad75",
+      "verified_file_count": 1,
+      "reason": "Dosya kanıtları bağımsız yeniden hesaplandı"
+    },
+    "created_at": "2026-11-13T13:00:48.652425+00:00"
+  },
+  {
+    "id": 15,
+    "task_id": "95d99c0b-b159-4524-a64a-57d2eb43838c",
+    "type": "task.assigned",
+    "agent_id": "coo",
+    "payload": {
+      "from_agent_id": "kado",
+      "to_agent_id": "coo",
+      "purpose": "Operasyon departmanından bağımsız son denetim iste"
+    },
+    "created_at": "2026-11-13T13:00:48.656872+00:00"
+  },
+  {
+    "id": 16,
+    "task_id": "95d99c0b-b159-4524-a64a-57d2eb43838c",
+    "type": "task.assigned",
+    "agent_id": "quality_auditor",
+    "payload": {
+      "from_agent_id": "coo",
+      "to_agent_id": "quality_auditor",
+      "purpose": "QA sonucundan bağımsız dosya doğrulaması ve son denetim"
+    },
+    "created_at": "2026-11-13T13:00:48.660709+00:00"
+  },
+  {
+    "id": 17,
+    "task_id": "95d99c0b-b159-4524-a64a-57d2eb43838c",
+    "type": "tool.started",
+    "agent_id": "quality_auditor",
+    "payload": {
+      "name": "audit_report",
+      "args": {
+        "task_id": "95d99c0b-b159-4524-a64a-57d2eb43838c"
+      }
+    },
+    "created_at": "2026-11-13T13:00:48.661850+00:00"
+  },
+  {
+    "id": 18,
+    "task_id": "95d99c0b-b159-4524-a64a-57d2eb43838c",
+    "type": "tool.completed",
+    "agent_id": "quality_auditor",
+    "payload": {
+      "name": "audit_report",
+      "status": "SUCCEEDED"
+    },
+    "created_at": "2026-11-13T13:00:48.670630+00:00"
+  },
+  {
+    "id": 19,
+    "task_id": "95d99c0b-b159-4524-a64a-57d2eb43838c",
+    "type": "review.completed",
+    "agent_id": "quality_auditor",
+    "payload": {
+      "stage": "audit",
+      "passed": true,
+      "checks": [
+        {
+          "name": "schema",
+          "passed": true
+        },
+        {
+          "name": "scope",
+          "passed": true
+        },
+        {
+          "name": "hashes_sizes_and_paths",
+          "passed": true
+        },
+        {
+          "name": "file_count",
+          "passed": true
+        },
+        {
+          "name": "total_bytes",
+          "passed": true
+        },
+        {
+          "name": "exclusions_disclosed",
+          "passed": true
+        }
+      ],
+      "report_sha256": "156bf625c5365d36b426bd8d80c3847ac10140fab2c42608b1b6e22a6e75ad75",
+      "verified_file_count": 1,
+      "reason": "Dosya kanıtları bağımsız yeniden hesaplandı"
+    },
+    "created_at": "2026-11-13T13:00:48.672655+00:00"
+  },
+  {
+    "id": 20,
+    "task_id": "95d99c0b-b159-4524-a64a-57d2eb43838c",
+    "type": "task.status",
+    "agent_id": null,
+    "payload": {
+      "status": "APPROVED"
+    },
+    "created_at": "2026-11-13T13:00:48.681617+00:00"
+  },
+  {
+    "id": 21,
+    "task_id": "95d99c0b-b159-4524-a64a-57d2eb43838c",
+    "type": "task.completed",
+    "agent_id": "kado",
+    "payload": {
+      "summary": "1 dosya / 40 bayt için SHA-256 kanıtları doğrulandı; 0 öğe kapsam dışı.",
+      "report_sha256": "156bf625c5365d36b426bd8d80c3847ac10140fab2c42608b1b6e22a6e75ad75"
+    },
+    "created_at": "2026-11-13T13:00:48.682633+00:00"
+  }
+]

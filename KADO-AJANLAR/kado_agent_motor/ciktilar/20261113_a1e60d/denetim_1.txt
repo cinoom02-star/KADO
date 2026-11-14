@@ -1,0 +1,1 @@
+Kontrol: ON KONTROLDEN GECTI\nBu otomatik kontrol tam guvenlik/dil dogrulamasi degildir.\n

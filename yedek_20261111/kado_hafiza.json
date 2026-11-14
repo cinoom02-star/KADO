@@ -1,0 +1,80 @@
+{
+ "projeler": {
+  "PROJE ADI": {
+   "tercihler": [],
+   "kararlar": [
+    {
+     "id": "20261111_113204_ed1c8f",
+     "karar": "REDDEDILDI",
+     "not": "deneme gorevi",
+     "zaman": "2026-11-11T12:53:52"
+    },
+    {
+     "id": "20261111_114048_34cf07",
+     "karar": "REDDEDILDI",
+     "not": "deneme gorevi",
+     "zaman": "2026-11-11T12:54:20"
+    }
+   ]
+  },
+  "GERCEK PROJE ADI": {
+   "tercihler": [],
+   "kararlar": [
+    {
+     "id": "20261111_115454_c47de7",
+     "karar": "REDDEDILDI",
+     "not": "deneme gorevi",
+     "zaman": "2026-11-11T12:54:20"
+    }
+   ]
+  },
+  "para kazanma yolu": {
+   "tercihler": [],
+   "kararlar": [
+    {
+     "id": "20261111_120606_25d85a",
+     "karar": "REDDEDILDI",
+     "not": "deneme gorevi",
+     "zaman": "2026-11-11T12:54:20"
+    }
+   ]
+  },
+  "Han Toys": {
+   "tercihler": [
+    "sade ve samimi dil, abartili vaat ve garanti verme"
+   ],
+   "kararlar": [
+    {
+     "id": "20261111_121524_faf441",
+     "karar": "ONAYLANDI",
+     "not": "",
+     "zaman": "2026-11-11T12:53:40"
+    }
+   ]
+  },
+  "KADO": {
+   "tercihler": [
+    "henuz cikmadi, merak uyandir, abartili vaat verme"
+   ],
+   "kararlar": [
+    {
+     "id": "20261111_131216_7b9cf9",
+     "karar": "ONAYLANDI",
+     "not": "",
+     "zaman": "2026-11-11T13:20:42"
+    }
+   ]
+  },
+  "Ornek Uygulama": {
+   "tercihler": [],
+   "kararlar": [
+    {
+     "id": "20261111_130049_cb8e32",
+     "karar": "REDDEDILDI",
+     "not": "yer tutucu deneme, KADO projesi yerine gecti",
+     "zaman": "2026-11-11T13:25:01"
+    }
+   ]
+  }
+ }
+}

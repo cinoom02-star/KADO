@@ -1,0 +1,26 @@
+{"time": "2026-11-10T16:06:23", "event": "start", "id": "20261110_160622_73ff50", "kind": "kod"}
+{"time": "2026-11-10T16:07:23", "event": "completed", "id": "20261110_160622_73ff50", "output": "C:\\KADO\\KADO-AJANLAR\\kado_agent_motor\\ciktilar\\20261110_160622_73ff50"}
+{"time": "2026-11-10T16:07:23", "event": "start", "id": "20261110_160622_ebb418", "kind": "paylasim"}
+{"time": "2026-11-10T16:08:25", "event": "completed", "id": "20261110_160622_ebb418", "output": "C:\\KADO\\KADO-AJANLAR\\kado_agent_motor\\ciktilar\\20261110_160622_ebb418"}
+{"time": "2026-11-10T16:14:17", "event": "start", "id": "20261110_161416_1f7729", "kind": "paylasim"}
+{"time": "2026-11-10T16:15:46", "event": "quality_check", "id": "20261110_161416_1f7729", "attempt": 1, "issues": []}
+{"time": "2026-11-10T16:15:46", "event": "completed", "id": "20261110_161416_1f7729", "output": "C:\\KADO\\KADO-AJANLAR\\kado_agent_motor\\ciktilar\\20261110_161416_1f7729"}
+{"time": "2026-11-10T16:33:16", "event": "start", "id": "20261110_163316_d8ea6b", "kind": "kod"}
+{"time": "2026-11-10T16:33:56", "event": "quality_check", "id": "20261110_163316_d8ea6b", "attempt": 1, "issues": ["Riskli import: os", "Riskli import: subprocess"]}
+{"time": "2026-11-10T16:35:38", "event": "quality_check", "id": "20261110_163316_d8ea6b", "attempt": 2, "issues": ["Riskli import: os", "Riskli import: subprocess"]}
+{"time": "2026-11-10T16:37:30", "event": "quality_check", "id": "20261110_163316_d8ea6b", "attempt": 3, "issues": ["Python sozdizimi: unterminated string literal (detected at line 6) (<unknown>, line 6)"]}
+{"time": "2026-11-10T16:37:30", "event": "review_required", "file": "20261110_163316_d8ea6b.working", "error": "Kalite kontrolunden gecmedi: Python sozdizimi: unterminated string literal (detected at line 6) (<unknown>, line 6)"}
+{"time": "2026-11-10T16:41:20", "event": "start", "id": "20261110_164115_903566", "kind": "kod", "mode": "single_attempt_audit"}
+{"time": "2026-11-10T16:41:35", "event": "quality_check", "id": "20261110_164115_903566", "attempt": 1, "issues": []}
+{"time": "2026-11-10T16:41:35", "event": "audit_completed", "id": "20261110_164115_903566", "decision": "STATIK_KONTROL_GECTI_DAVRANIS_TESTI_GEREKLI"}
+{"time": "2026-11-10T16:41:35", "event": "review_required", "file": "20261110_164115_903566.working", "error": "Uzman statik denetimi kaydedildi; davranis testi ve insan onayi gerekli"}
+{"time": "2026-11-10T16:44:02", "event": "start", "id": "20261110_164402_cec78a", "kind": "kod", "mode": "v3_audit_behavior_repair"}
+{"time": "2026-11-10T16:44:51", "event": "v3_audit_completed", "id": "20261110_164402_cec78a", "static": "STATIK_KONTROL_GECTI_DAVRANIS_TESTI_GEREKLI", "behavior": "GECTI"}
+{"time": "2026-11-10T16:44:51", "event": "review_required", "file": "20261110_164402_cec78a.working", "error": "V3 denetim tamamlandi; sonuc SONUC.json dosyasinda, insan onayi gerekli"}
+{"time": "2026-11-12T10:26:46", "event": "start", "id": "20261111_111542_767657", "kind": "arastirma"}
+{"time": "2026-11-12T10:28:16", "event": "completed", "id": "20261111_111542_767657", "output": "C:\\KADO\\KADO-AJANLAR\\kado_agent_motor\\ciktilar\\20261111_111542_767657"}
+{"time": "2026-11-13T09:59:13", "event": "start", "id": "20261112_65b31f", "kind": "paylasim"}
+{"time": "2026-11-13T10:02:13", "event": "failed", "file": "20261112_65b31f.working", "error": "timed out"}
+{"time": "2026-11-13T10:02:13", "event": "start", "id": "20261113_a1e60d", "kind": "paylasim"}
+{"time": "2026-11-13T10:04:51", "event": "quality_check", "id": "20261113_a1e60d", "attempt": 1, "issues": []}
+{"time": "2026-11-13T10:04:51", "event": "completed", "id": "20261113_a1e60d", "output": "C:\\KADO\\KADO-AJANLAR\\kado_agent_motor\\ciktilar\\20261113_a1e60d"}

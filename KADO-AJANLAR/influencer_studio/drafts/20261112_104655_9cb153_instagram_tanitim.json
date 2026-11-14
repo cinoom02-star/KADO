@@ -1,0 +1,25 @@
+{
+  "id": "20261112_104655_9cb153",
+  "project": "KADO",
+  "platform": "instagram",
+  "topic": "tanitim",
+  "status": "taslak",
+  "hook": "Bugun KADO icin kisa bir fikir: tanitim.",
+  "caption": "KADO icin tanitim temali samimi ve sade bir paylasim taslagi.",
+  "script": [
+    "Merhaba, ben KADO Nova.",
+    "Bugun KADO icin tanitim konusunu anlatiyorum.",
+    "Yorumlara dusunceni yazmayi unutma."
+  ],
+  "visual_prompt": "Ayni karakter, temiz isik, dikey kadraj, sosyal medya sunucusu tarzinda, konu: tanitim",
+  "voice_style": "samimi, net, kisa, guven veren",
+  "hashtags": [
+    "#kesfet",
+    "#yenilik",
+    "#ai",
+    "#kado"
+  ],
+  "needs_human_approval": true,
+  "publish_ready": false,
+  "created_at": "2026-11-12T07:46:55+00:00"
+}

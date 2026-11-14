@@ -1,0 +1,33 @@
+﻿KADO - ARAMA SES AKISI DUZELTMESI
+
+Bu paket V3 ustune kurulur. Kado'nun sohbet mantigini veya ilk selamini degistirmez.
+
+1. Kado'yu ve arama penceresini kapatin.
+2. ZIP dosyasini AYRI bir klasore TUMUNU AYIKLA ile acin.
+3. Ayiklanan klasorde KUR.bat dosyasina cift tiklayin.
+4. ONCEKI MOTOR ve TAMAM satirlarini saklayin.
+5. Kuruldu yazinca C:\KADO\kado\KADO_BIRLESIK_BASLAT.bat ile acin.
+6. Arkadasinizi aratin; ilk 'alo'dan sonraki cevabi ve sonraki 3 cevabi dinleyin.
+
+KONTROL.bat: dosyalari degistirmeden mevcut motoru denetler.
+GERI_AL.bat: bu paketin son kurulumundan onceki arama dosyalarini geri yukler.
+
+Kurulum ekraninda:
+- 'sessizlik filtresi=True': konusma bitisini algilamayi etkileyebilen eski filtre vardi.
+- 'sessizlik filtresi=False': bu filtre zaten yoktu; gecikmenin tek sebebi oldugu soylenemez.
+
+Ne degisiyor?
+- Motorun sessiz PCM parcalari da iletilir; sessizlik zaman akisi kaybolmaz.
+- Motorun bildirdigi hiz, kanal ve parca uzunlugu kullanilir.
+- Gelen ses Kado'nun bekledigi 16000Hz mono bicimine cevrilir.
+- Ses okuma saati bu bicime uygun ilerler; gecikmis eski kareler topluca yigilmaz.
+- WASM bellegindeki parca kopyalanir ve onceki ses yeniden kullanilmaz.
+- Eski yerel enerjiyle ses silme cagrisi varsa kaldirilir; Gemini'nin kesme olayi korunur.
+
+Hesap, auth/QR oturumlari, numaralar, ses kimligi, anahtarlar, main.py ve mesajlasma
+ dosyalari degismez. Sadece Linux arama adaptorundeki dosyalar degisir ve yedeklenir.
+
+Yerel kontroller gecti. Gercek WhatsApp agi / senin mikrofonun / Gemini hesabinla
+2-3 saniye canli cevap henuz dogrulanmadi. Bu paket kesin sure garantisi vermez.
+Ilk testte kurulumun ONCEKI MOTOR satirini ve arama kayitlarini gonderin.
+Arastirmanin ayrintilari ARASTIRMA.md icindedir.

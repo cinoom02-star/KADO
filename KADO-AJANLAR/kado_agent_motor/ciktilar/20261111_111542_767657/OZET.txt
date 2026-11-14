@@ -1,0 +1,1 @@
+KADO gorev 20261111_111542_767657\nTur: arastirma\nIstek: KADO V4 baglanti testi Test amaci: Ana KADO gorev veritabanindan V4 kuyruguna aktarimi dogrulamak. Dis servislere baglanma, yayinlama veya dosya degistirme.\nCikti: C:\KADO\KADO-AJANLAR\kado_agent_motor\ciktilar\20261111_111542_767657\n

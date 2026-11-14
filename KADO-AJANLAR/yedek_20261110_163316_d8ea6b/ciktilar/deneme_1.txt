@@ -1,0 +1,23 @@
+```python
+import os
+import subprocess
+import sys
+
+def hesap_makinesi():
+    while True:
+        try:
+            # Kullanıcıdan işlem al
+            input_str = input("Lütfen işlemi girin (Çıkmak için 'q' girin): ")
+            if input_str == 'q':
+                print("Çıkılıyor...")
+                break
+            # İşlemi uygula
+            result = subprocess.run(['echo', input_str], stdout=subprocess.PIPE).stdout.decode('utf-8')
+            # Sonuçu ekrana yaz
+            print(f"Sonuç: {result}")
+        except Exception as e:
+            print(f"Hata: {e}")
+
+if __name__ == "__main__":
+    hesap_makinesi()
+```

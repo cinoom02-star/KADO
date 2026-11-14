@@ -1,0 +1,4 @@
+KADO gorev 20261110_160622_73ff50
+Tur: kod
+Istek: Cocuklar icin basit sayi tahmin oyunu yaz
+Cikti: C:\KADO\KADO-AJANLAR\kado_agent_motor\ciktilar\20261110_160622_73ff50

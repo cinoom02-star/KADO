@@ -1,0 +1,14 @@
+Test Amaci: Ana KADO uygulamasının veritabanından V4 tablosuna veri aktarımının düzgün şekilde gerçekleşip gerçekleşmediğini kontrol etmek.
+
+Gorev Amaci: KADO V4 baglanti testi
+
+Bu testi gerçekleştirirken, amacımız ana KADO uygulaması veritabanından V4 tablosuna veri aktarımı doğru şekilde gerçekleşip gerçekleşmediğini kontrol etmek ve böylece uygulamanın düzgün şekilde çalışıyor olduğunu doğrulamaktır. Testi gerçekleştirmek için, ana KADO uygulaması ile V4 baglantısını kontrol edeceğiz. 
+
+Bu testi gerçekleştirdiğinde, aşağıdaki adımlar uygulanacaktır:
+
+1. Ana KADO uygulamasını başlatın ve veritabanına bağlanın.
+2. V4 tablosuna erişin ve veri varlığına bakın.
+3. Ana KADO uygulamasından V4 tablosuna veri aktarımını kontrol edin.
+4. Aktarılan verilerin doğru şekilde aktarıldığını doğrulayın.
+
+Bu test, ana KADO uygulamasının V4 tablosuna doğru veri aktarımını kontrol etmek için uygulanmış olacak. Test sonunda, doğru veri aktarımının gerçekleşip gerçekleşmediğini belirleyici olacak. Test sonucunda, doğru bir veri aktarımının gerçekleştiği durumlarda uygulamanın işlevselliklerini artıracak, yanlış bir veri aktarımının gerçekleştiği durumlarda hataların düzeltilmesi için yorumlanacak.

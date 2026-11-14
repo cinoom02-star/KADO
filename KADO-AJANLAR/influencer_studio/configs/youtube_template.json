@@ -1,0 +1,6 @@
+{
+  "api": "videos.insert",
+  "oauth_required": true,
+  "auto_publish": false,
+  "status": "baglanti_bekliyor"
+}

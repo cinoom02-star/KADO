@@ -1,0 +1,25 @@
+{
+  "rapor_tarihi_utc": "2026-11-10T12:43:59.722706+00:00",
+  "kaynak": "GitHub REST API",
+  "depo": {
+    "depo": "psf/requests",
+    "aciklama": "A simple, yet elegant, HTTP library.",
+    "dil": "Python",
+    "yildiz": 54751,
+    "fork": 10765,
+    "lisans": "Apache-2.0",
+    "arsiv": false,
+    "son_guncelleme": "2026-11-02T16:55:12Z",
+    "adres": "https://github.com/psf/requests"
+  },
+  "analiz": {
+    "yildiz": 54751,
+    "fork": 10765,
+    "fork_yildiz_orani_yuzde": 19.66
+  },
+  "sinirlamalar": [
+    "Yildiz sayisi kalite garantisi degildir",
+    "Fork/yildiz orani kalite puani degildir",
+    "Kod guvenligi ve calisma testleri yapilmadi"
+  ]
+}

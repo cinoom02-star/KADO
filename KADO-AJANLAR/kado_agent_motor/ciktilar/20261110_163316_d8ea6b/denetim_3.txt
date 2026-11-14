@@ -1,0 +1,1 @@
+Kontrol: RED\nPython sozdizimi: unterminated string literal (detected at line 6) (<unknown>, line 6)\nBu otomatik kontrol tam guvenlik/dil dogrulamasi degildir.\n

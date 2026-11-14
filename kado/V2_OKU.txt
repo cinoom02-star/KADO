@@ -1,0 +1,5 @@
+WhatsApp penceresini kapatin. Bu ZIP dosyasini C:\KADO\kado klasorune ayiklayin. Ayni adli dosyalari degistirin. WHATSAPP_BASLAT.bat dosyasini acin. Baslikta KADO WHATSAPP V2 gorunmeli. 1 ve ayni test numarasiyla deneyin.
+Kurulum veya npm komutu gerekmiyor. Ayarlar, anahtarlar, tarayici ayari ve .session oturumu pakette yok; degismez.
+Duzeltmeler: Mesaj kimligi olmayan yanit kontrolu, Turkce UTF-8, yaziyor/okundu uyumlulugu, ikinci mesaj filtresi, hata asamalari, test sohbetinde 10 saniyelik ek mesaj kontrolu.
+Otomatik elle-cevap algilama kapatildi: cevaplari durdurmak icin pencereye dur, tekrar acmak icin ac yazin. Tum bireysel sohbetler moduna gecmeden once test edin. Canli arama destegi YOKTUR.
+Model secimi duzeltmesi dahil; Gemini hizmet kotasi arttirilmaz. Canli WhatsApp oturumunda dogrulama gereklidir.

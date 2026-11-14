@@ -1,0 +1,90 @@
+{
+  "gorev_id": 1,
+  "tarih_utc": "2026-11-10T12:53:26.536484+00:00",
+  "yonetici": "MIMAR",
+  "uzmanlar": [
+    "U04",
+    "U06",
+    "U18"
+  ],
+  "plan": {
+    "proje": "Basit çocuk oyunu için MVP planı",
+    "kaynak_gorev_aciklamasi": "Düşük maliyetli bir Android oyunu tasarla. Teknik plan, gelir modeli, geliştirme aşamaları ve riskleri değerlendir. Henüz kod yazma veya yayınlama.",
+    "plan_turu": "Kural tabanli baslangic MVP taslagi",
+    "hedef": "Tek temel mekanige sahip basit bir cocuk oyunu",
+    "onerilen_mvp": {
+      "ekranlar": [
+        "Ana menu",
+        "Oyun ekrani",
+        "Sonuc ekrani"
+      ],
+      "temel_ozellikler": [
+        "Dokunmatik kontrol",
+        "Basit puan sistemi",
+        "Yeniden baslatma",
+        "Ses acma kapatma"
+      ],
+      "ilk_surume_alinmayacaklar": [
+        "Cok oyunculu mod",
+        "Hesap sistemi",
+        "Uygulama ici odeme",
+        "Kisisel veri toplama"
+      ]
+    },
+    "gelistirme_gorevleri": [
+      {
+        "id": "G01",
+        "is": "Oyun mekanigini kesinlestir",
+        "oncelik": 1
+      },
+      {
+        "id": "G02",
+        "is": "Ekran akislarini tasarla",
+        "oncelik": 2
+      },
+      {
+        "id": "G03",
+        "is": "Dokunmatik kontrolu gelistir",
+        "oncelik": 3
+      },
+      {
+        "id": "G04",
+        "is": "Puan sistemini gelistir",
+        "oncelik": 4
+      },
+      {
+        "id": "G05",
+        "is": "Ses ve gorselleri ekle",
+        "oncelik": 5
+      },
+      {
+        "id": "G06",
+        "is": "Cihaz testlerini tamamla",
+        "oncelik": 6
+      }
+    ],
+    "test_kriterleri": [
+      "Oyun acilisinda hata olmamali",
+      "Dokunmatik kontroller calismali",
+      "Puan dogru hesaplanmali",
+      "Yeniden baslatma calismali",
+      "Ses kapatma calismali",
+      "Dusuk donanimli cihazda test edilmeli",
+      "Cocuklara uygun icerik kontrol edilmeli"
+    ],
+    "eksik_kararlar": [
+      "Oyun turu",
+      "Hedef yas araligi",
+      "Android veya iOS hedefi",
+      "Gorsel stil",
+      "Oyun mekanigi"
+    ],
+    "sinirlamalar": [
+      "Bu plan otomatik uretilmis genel bir taslaktir",
+      "Gercek oyun kodu uretilmedi",
+      "Testler calistirilmadi",
+      "Magaza yayin uygunlugu dogrulanmadi"
+    ]
+  },
+  "gercek_test_yapildi": false
+}

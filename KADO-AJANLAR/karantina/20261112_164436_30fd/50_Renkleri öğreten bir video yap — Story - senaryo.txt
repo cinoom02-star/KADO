@@ -1,0 +1,21 @@
+# Renkleri öğreten bir video yap — Story
+
+Komut: renkleri öğreten bir video yap
+Süre: 15sn | Format: 9:16 | Stil: cartoon
+
+## Anlatım
+Once upon a time, our brave little friend set off on an adventure! Along the way, our friend discovered something amazing and new! And so our friend returned home, happy and full of stories. The end!
+
+## Sahneler
+
+### Sahne 1 (5sn)
+Görsel: bright flat 2D cartoon style with bold outlines, saturated colors, simple shapes, vertical 9:16 composition for short-form video. Scene: The adventure begins. a cheerful round-faced child character with curly brown hair and a red shirt (keep identical every scene) standing at the edge of a colorful magical forest, eager and ready. Consistent characters: a cheerful round-faced child character with curly brown hair and a red shirt (keep identical every scene). Safe for children, no text overlays unless educational.
+Anlatım: Once upon a time, our brave little friend set off on an adventure!
+
+### Sahne 2 (5sn)
+Görsel: bright flat 2D cartoon style with bold outlines, saturated colors, simple shapes, vertical 9:16 composition for short-form video. Scene: Discovery 1. a cheerful round-faced child character with curly brown hair and a red shirt (keep identical every scene) discovering something wondrous — a glowing tree, a sparkling stream, a hidden path. Consistent characters: a cheerful round-faced child character with curly brown hair and a red shirt (keep identical every scene). Safe for children, no text overlays unless educational.
+Anlatım: Along the way, our friend discovered something amazing and new!
+
+### Sahne 3 (5sn)
+Görsel: bright flat 2D cartoon style with bold outlines, saturated colors, simple shapes, vertical 9:16 composition for short-form video. Scene: Home safe. a cheerful round-faced child character with curly brown hair and a red shirt (keep identical every scene) returning home happily with a warm sunset and a rainbow. Consistent characters: a cheerful round-faced child character with curly brown hair and a red shirt (keep identical every scene). Safe for children, no text overlays unless educational.
+Anlatım: And so our friend returned home, happy and full of stories. The end!

@@ -1,0 +1,18 @@
+KADO - Telefonuna WhatsApp mesaji (ucretsiz, 2 dakika)
+=====================================================
+Kado artik sana WhatsApp'tan yazabilir ("bunu telefonuma gonder", is bitti bildirimi...).
+Bilgisayar basinda degilsen (3 dk bos kalirsa) is sonuclarini ve sorularini otomatik telefonuna da yazar.
+
+1) Tarayicida su sayfayi ac ve adimlari aynen izle:
+     callmebot.com/blog/free-api-whatsapp-messages/
+   (Sayfadaki botun numarasini rehberine ekler, WhatsApp'tan ona
+    "I allow callmebot to send me messages" yazarsin; sana APIKEY gelir.)
+2) sistem\config\api_keys.json dosyasini Not Defteri ile ac, su iki satiri doldur:
+     "callmebot_phone": "+905XXXXXXXXX",
+     "callmebot_apikey": "SANA_GELEN_KOD",
+3) Kaydet, Kado'yu yeniden ac. Dene: "Kado, telefonuma 'merhaba' yaz."
+
+Notlar:
+- Servis ucretsiz ve 3. partidir; mesajlar onun uzerinden gecer. Cok gizli seyler yazdirma.
+- Tek yonludur: sen WhatsApp'tan cevap yazarsan Kado okumaz. Konusmak icin sesle ya da KADO TELEFON panelini kullan.
+- Bot cevap vermezse 24 saat sonra tekrar dene (servis kuralidir).

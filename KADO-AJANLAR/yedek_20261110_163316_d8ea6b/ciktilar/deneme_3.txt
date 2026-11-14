@@ -1,0 +1,58 @@
+Bu durumda, `os` ve `subprocess` modülleri yerine daha güvenli ve ihtiyacınıza uygun olan modüller kullanılabilir. İşte bir simples Python 3 dosyası örneği oluşturmak için kullanılan başka modüller:
+
+- `math` modülü, matematiksel işlemler yapmak için kullanılır.
+- `datetime` modülü, zaman ve tarih işlemlerini yapmak için kullanılır.
+
+Aşağıda `math` ve `datetime` modüllerini kullanarak Python'da bir dört işlem hesap makinesi oluşturmak için bir Python dosyası örneği verilmiştir.
+
+```python
+import math
+from datetime import datetime
+
+def hesapla(dogru_cevap, kullanici_cevap):
+    if dogru_cevap == kullanici_cevap:
+        return "Doğru Cevap!"
+    else:
+        return f"Yanlış Cevap! Doğru cevap: {dogru_cevap}"
+
+def hesap_makinesi():
+    # Math modülünden önemli operasyonlar
+    print("Matematiksel İşlemler:")
+    print("1. Toplama")
+    print("2. Çıkarma")
+    print("3. Çarpma")
+    print("4. Bölme")
+    
+    secim = input("İşlem Seçiminiz (1-4): ")
+    
+    if secim not in ('1', '2', '3', '4'):
+        return "Geçersiz Seçim"
+
+    if secim == '1':
+        sayi1 = float(input("Birinci Sayı: "))
+        sayi2 = float(input("İkinci Sayı: "))
+        sonuc = sayi1 + sayi2
+    elif secim == '2':
+        sayi1 = float(input("Birinci Sayı: "))
+        sayi2 = float(input("İkinci Sayı: "))
+        sonuc = sayi1 - sayi2
+    elif secim == '3':
+        sayi1 = float(input("Birinci Sayı: "))
+        sayi2 = float(input("İkinci Sayı: "))
+        sonuc = sayi1 * sayi2
+    elif secim == '4':
+        sayi1 = float(input("Birinci Sayı: "))
+        sayi2 = float(input("İkinci Sayı: "))
+        if sayi2 == 0:
+            return "0'a bölünemez"
+        sonuc = sayi1 / sayi2
+
+    dogru_cevap = sonuc
+    kullanici_cevap = float(input("Sonuç: "))
+
+    return hesapla(dogru_cevap, kullanici_cevap)
+
+def zaman_hesapla():
+    print("Zaman Hesaplayıcı:")
+    baslama_zamani = datetime.now()
+    baslama_zamani_str = baslama_zamani.strftime("%Y-%m-%d %H

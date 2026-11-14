@@ -1,0 +1,14 @@
+﻿KADO SADE ARAMA ACILISI V3
+
+1. Kado ve arama penceresini kapatin.
+2. Bu ZIP dosyasini ayiklayin.
+3. Ayiklanan klasordeki KUR.bat dosyasina cift tiklayin.
+4. Kuruldu yazinca C:\KADO\kado\KADO_BIRLESIK_BASLAT.bat dosyasini acin.
+5. Ayni numarayi yeniden aratin.
+
+Bu surum ayri hazirlanan acilis kaydini ve yerel enerjiye gore ses kesmeyi kaldirir.
+Gemini kendi konusma kesme olaylarini islemeye devam eder.
+WhatsApp mesajlasma dosyalari, hesap, QR oturumlari ve anahtarlar degistirilmez.
+Degisen dosyalarin tarihli yedegi alinir.
+Gercek arama gecikmesi bu ortamda test edilemedi.
+Bekleme surerse Kado ekranindaki Sade acilis V3, Arama olcumu ve Ilk ses parcasi satirlarini paylasin.

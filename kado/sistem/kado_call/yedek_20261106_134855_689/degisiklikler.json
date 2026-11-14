@@ -1,0 +1,72 @@
+﻿[
+    {
+        "destination":  "C:\\KADO\\kado\\ARAMA_KUR.bat",
+        "backup":  "C:\\KADO\\kado\\sistem\\kado_call\\yedek_20261106_134855_689\\ARAMA_KUR.bat",
+        "existed":  false
+    },
+    {
+        "destination":  "C:\\KADO\\kado\\KADO_BIRLESIK_BASLAT.bat",
+        "backup":  "C:\\KADO\\kado\\sistem\\kado_call\\yedek_20261106_134855_689\\KADO_BIRLESIK_BASLAT.bat",
+        "existed":  false
+    },
+    {
+        "destination":  "C:\\KADO\\kado\\sistem\\kado_birlesik.py",
+        "backup":  "C:\\KADO\\kado\\sistem\\kado_call\\yedek_20261106_134855_689\\sistem\\kado_birlesik.py",
+        "existed":  false
+    },
+    {
+        "destination":  "C:\\KADO\\kado\\sistem\\kado_call\\arama-kur.ps1",
+        "backup":  "C:\\KADO\\kado\\sistem\\kado_call\\yedek_20261106_134855_689\\sistem\\kado_call\\arama-kur.ps1",
+        "existed":  false
+    },
+    {
+        "destination":  "C:\\KADO\\kado\\sistem\\kado_call\\baslat-birlesik.ps1",
+        "backup":  "C:\\KADO\\kado\\sistem\\kado_call\\yedek_20261106_134855_689\\sistem\\kado_call\\baslat-birlesik.ps1",
+        "existed":  false
+    },
+    {
+        "destination":  "C:\\KADO\\kado\\sistem\\kado_call\\kado-native-call.mts",
+        "backup":  "C:\\KADO\\kado\\sistem\\kado_call\\yedek_20261106_134855_689\\sistem\\kado_call\\kado-native-call.mts",
+        "existed":  false
+    },
+    {
+        "destination":  "C:\\KADO\\kado\\sistem\\kado_call\\kado_host.py",
+        "backup":  "C:\\KADO\\kado\\sistem\\kado_call\\yedek_20261106_134855_689\\sistem\\kado_call\\kado_host.py",
+        "existed":  false
+    },
+    {
+        "destination":  "C:\\KADO\\kado\\sistem\\kado_call\\kur.sh",
+        "backup":  "C:\\KADO\\kado\\sistem\\kado_call\\yedek_20261106_134855_689\\sistem\\kado_call\\kur.sh",
+        "existed":  false
+    },
+    {
+        "destination":  "C:\\KADO\\kado\\sistem\\kado_call\\live-feeder.mjs",
+        "backup":  "C:\\KADO\\kado\\sistem\\kado_call\\yedek_20261106_134855_689\\sistem\\kado_call\\live-feeder.mjs",
+        "existed":  false
+    },
+    {
+        "destination":  "C:\\KADO\\kado\\sistem\\kado_call\\patch-sdk.mjs",
+        "backup":  "C:\\KADO\\kado\\sistem\\kado_call\\yedek_20261106_134855_689\\sistem\\kado_call\\patch-sdk.mjs",
+        "existed":  false
+    },
+    {
+        "destination":  "C:\\KADO\\kado\\sistem\\whatsapp_kado\\bridge.js",
+        "backup":  "C:\\KADO\\kado\\sistem\\kado_call\\yedek_20261106_134855_689\\sistem\\whatsapp_kado\\bridge.js",
+        "existed":  true
+    },
+    {
+        "destination":  "C:\\KADO\\kado\\sistem\\whatsapp_kado\\policy.js",
+        "backup":  "C:\\KADO\\kado\\sistem\\kado_call\\yedek_20261106_134855_689\\sistem\\whatsapp_kado\\policy.js",
+        "existed":  true
+    },
+    {
+        "destination":  "C:\\KADO\\kado\\sistem\\whatsapp_kado\\worker.py",
+        "backup":  "C:\\KADO\\kado\\sistem\\kado_call\\yedek_20261106_134855_689\\sistem\\whatsapp_kado\\worker.py",
+        "existed":  true
+    },
+    {
+        "destination":  "C:\\KADO\\kado\\sistem\\whatsapp_kado\\vendor\\whatsapp-web.js\\src\\structures\\Message.js",
+        "backup":  "C:\\KADO\\kado\\sistem\\kado_call\\yedek_20261106_134855_689\\sistem\\whatsapp_kado\\vendor\\whatsapp-web.js\\src\\structures\\Message.js",
+        "existed":  true
+    }
+]

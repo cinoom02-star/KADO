@@ -1,0 +1,1 @@
+KADO gerçek HTTP uçtan uca doğrulama

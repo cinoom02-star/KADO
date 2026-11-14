@@ -1,0 +1,16 @@
+{
+  "mode": "live_http_sdk",
+  "database": "sqlite",
+  "existing_kado_connected": false,
+  "whatsapp_tested": false,
+  "task_id": "c7cbd530-c3ba-46f4-8d80-02f95d3b28be",
+  "status": "APPROVED",
+  "agents": 35,
+  "event_count": 21,
+  "report_sha256": "156bf625c5365d36b426bd8d80c3847ac10140fab2c42608b1b6e22a6e75ad75",
+  "source_sha256": "5c48f99e12de78ed590ea5d1120fc88b7465a413b3338214bf2f44df237424ce",
+  "static_frontend_http": true,
+  "duplicate_submission_suppressed": true,
+  "restart_history_preserved": true,
+  "passed": true
+}

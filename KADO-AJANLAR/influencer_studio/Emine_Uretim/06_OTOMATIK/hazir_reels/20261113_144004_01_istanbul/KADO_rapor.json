@@ -1,0 +1,21 @@
+{
+  "tarih": "2026-11-13T14:40:04",
+  "konum": "İstanbul sokakları",
+  "konu": "Güne güzel bir başlangıç",
+  "gorsel": "C:\\KADO\\KADO-AJANLAR\\influencer_studio\\Emine_Uretim\\06_OTOMATIK\\fotograflar\\01_istanbul.png",
+  "metin_kaynagi": "Yerel senaryo havuzu",
+  "metin": "Merhaba, ben Emine! Bugün İstanbul sokaklarında küçük bir mola verdim. Sizce bir günü güzelleştiren şey nedir?",
+  "instagram_otomatik_yayin": false,
+  "durum": "YAYIN_ONAYI_BEKLIYOR",
+  "teknik_denetim": {
+    "teknik_kontrol": "GECTI",
+    "sure_saniye": 7.65,
+    "uyarilar": [],
+    "dudak_senkronu_dogrulandi": false,
+    "yuz_tutarliligi_dogrulandi": false
+  },
+  "video": "C:\\KADO\\KADO-AJANLAR\\influencer_studio\\Emine_Uretim\\06_OTOMATIK\\hazir_reels\\20261113_144004_01_istanbul\\Emine_REELS_HAZIR.mp4",
+  "motor": "hareketli_fotograf",
+  "dudak_senkronu_uretildi": false,
+  "insan_kontrolu_gerekli": true
+}

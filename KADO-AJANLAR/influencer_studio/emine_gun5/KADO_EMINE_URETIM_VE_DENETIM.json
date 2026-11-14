@@ -1,0 +1,43 @@
+{
+  "proje": "KADO EMINE",
+  "durum": "TASLAK - yayinlanmadi",
+  "video_tipi": "Fotograftan yavas kamera yaklasmasi + ekranda yazi; dudak senkronu yok",
+  "karakter": {
+    "ad": "Emine",
+    "kimlik_referansi": "Emine_ANA_REFERANS.png",
+    "sabit_detay": "Kucuk siyah ben, resimde gorulen yanakta ve ayni noktada. Yuzu ve genel oranlari koru.",
+    "ai_karakter_bildirimi": true
+  },
+  "icerik": {
+    "platform": "Instagram Reels",
+    "oran": "9:16",
+    "sure_saniye": 10,
+    "tema": "tanitim",
+    "taslak_ses_metni": "Merhaba, ben Emine. Yeni hikâyem başlıyor. Yakında burada birlikteyiz!",
+    "altyazi": [
+      "Merhaba, ben Emine.",
+      "Yeni hikâyem başlıyor.",
+      "Çok yakında burada."
+    ]
+  },
+  "ajanlar": {
+    "KADO Genel Mudur": "Fikir ve yayin takvimini belirler; yalnizca test dosyasi olusturuldu",
+    "Gorsel Ajani": "Ana yuz referansini ve siyah benin konumunu koruyarak mekan/kiyafet varyantlari uretir",
+    "Video Ajani": "Bulutta image-to-video ve ElevenLabs sesinden konusan video uretir; bu asama bagli degil",
+    "Mevcut Denetci": "Yuz benzerligi ve ben konumu, video kalitesi, ses-dudak uyumu, AI bildirimi, telif ve onay kontrolunu yapar"
+  },
+  "onay": {
+    "otomatik_paylasim": false,
+    "sosyal_hesap_bagli": false,
+    "bulut_video_motoru_bagli": false,
+    "elevenlabs_bagli": false,
+    "denetci_sistemine_bagli": false
+  },
+  "denetim_kriterleri": {
+    "ben_tutarliligi": "Her karede ayni yanak ve ayni konum",
+    "yuz_tutarliligi": "Referans yuze yakinlik",
+    "ses": "Gercek sesli uretim yapilirsa gerekli",
+    "kullanici_onayi": "Yayindan once gerekli"
+  },
+  "ornek_yayin_aciklamasi": "Merhaba, ben Emine ✨ Yeni hikâyem burada başlıyor. Neler görmek istersiniz? #SanalInfluencer #YapayZekaKarakteri #Emine"
+}

@@ -1,0 +1,148 @@
+# -*- coding: utf-8 -*-
+"""KADO 3.1 - Yerel influencer taslak üretimi ve sesli rapor uzantisi."""
+from __future__ import annotations
+import datetime as dt
+import json
+import os
+from pathlib import Path
+import re
+import uuid
+
+ROOT = Path(__file__).resolve().parent
+STUDIO = ROOT / 'influencer_studio'
+
+
+def normalize(value):
+    return str(value or '').casefold().translate(str.maketrans('çğıöşüâîû','cgiosuaiu'))
+
+
+def number_in(text, default=1):
+    t = normalize(text)
+    for word, n in [('on',10),('dokuz',9),('sekiz',8),('yedi',7),('alti',6),('bes',5),('dort',4),('uc',3),('iki',2),('bir',1)]:
+        if re.search(r'(?<!\w)'+word+r'(?!\w)',t):return n
+    m=re.search(r'(?<!\d)(\d{1,2})(?!\d)',t)
+    return min(10,max(1,int(m.group(1)))) if m else default
+
+
+def project_of(text, explicit=None):
+    q=normalize((explicit or '')+' '+text)
+    if 'han toys' in q or 'hantoys' in q:return 'Han Toys'
+    return 'KADO'
+
+
+def platform_of(text):
+    q=normalize(text)
+    if 'tiktok' in q:return 'tiktok'
+    if 'youtube' in q or 'shorts' in q:return 'youtube'
+    return 'instagram'
+
+
+def read_json(path, default=None):
+    try:return json.loads(path.read_text(encoding='utf-8-sig'))
+    except (OSError,UnicodeError,ValueError):return default
+
+
+def safe_write(path, value):
+    path.parent.mkdir(parents=True,exist_ok=True)
+    tmp=path.with_name(path.name+'.'+uuid.uuid4().hex[:8]+'.tmp')
+    try:
+        with tmp.open('x',encoding='utf-8') as f:
+            json.dump(value,f,ensure_ascii=False,indent=2)
+            f.flush();os.fsync(f.fileno())
+        os.replace(tmp,path)
+    finally:
+        if tmp.exists():tmp.unlink()
+
+
+def status():
+    identity=read_json(STUDIO/'identity'/'influencer_identity.json',{}) or {}
+    cal=read_json(STUDIO/'calendar'/'30_gunluk_plan.json',{}) or {}
+    drafts=sorted((STUDIO/'drafts').glob('*.json')) if (STUDIO/'drafts').is_dir() else []
+    return (f"KADO Nova sanal influencer stüdyosu: {len(drafts)} kayıtlı metin taslağı, "
+            f"{len(cal.get('days',[]))} günlük içerik planı. "
+            "Gerçek yüz, görsel ve video üretimi henüz bağlı değil. "
+            "Otomatik yayın kapalı; insan onayı gerekiyor.")
+
+
+def calendar_report():
+    cal=read_json(STUDIO/'calendar'/'30_gunluk_plan.json',{}) or {}
+    days=cal.get('days',[])
+    if not days:return 'Sanal influencer takvimi bulunamadı, hiçbir şey değiştirilmedi.'
+    start='; '.join(f"{d.get('day')}. gün {d.get('platform')}: {d.get('topic')}" for d in days[:5])
+    return f"{len(days)} günlük plan hazır. İlk beş gün: {start}. Paylaşım yapılmadı."
+
+
+def make_drafts(project='KADO', topic='tanıtım', platform='instagram', count=1):
+    if not (STUDIO/'identity'/'influencer_identity.json').is_file():
+        return 'KADO 3.0 karakter dosyası bulunamadı. Yeni taslak oluşturmadım.'
+    if not (STUDIO/'calendar'/'30_gunluk_plan.json').is_file():
+        return 'KADO 3.0 içerik takvimi bulunamadı. Yeni taslak oluşturmadım.'
+    count=max(1,min(10,int(count)))
+    # Ayni metni tekrar kullanmak yerine 10 farkli editorial format.
+    formats=[
+      ('Bir soru ile açılış','İnsanların en çok merak ettiği soruyu sor, tek cevap ver.'),
+      ('Önce ve sonra','Bir problemi ve pratik çözümünü karşılaştır.'),
+      ('Üç kısa ipucu','Üç kısa, doğrulanabilir öneri sun.'),
+      ('Bir günün hikâyesi','Kısa bir günlük sahne anlat, sonunda ana fikri ver.'),
+      ('Yanlış bilinenler','Yaygın bir yanılgıyı kanıtla değil, dikkatle açıkla.'),
+      ('Kulis','Üretim veya hazırlık sürecinden bir anı anlat.'),
+      ('Mini rehber','İzleyiciyi üç basamakta sonuca götür.'),
+      ('Soru cevap','Gelen bir soruya sıcak ve net yanıt ver.'),
+      ('Karşılaştırma','İki seçeneğin artı ve eksilerini göster.'),
+      ('Gelecek fikri','Yenilikçi bir senaryo sun ve görüş sor.')
+    ]
+    now=dt.datetime.now(dt.timezone.utc)
+    files=[]
+    for i in range(count):
+        style, direction=formats[i%len(formats)]
+        key=now.strftime('%Y%m%d_%H%M%S')+'_'+uuid.uuid4().hex[:10]
+        caption=f"{topic.capitalize()} üzerine {style.lower()}. Sen bu konuda ne düşünüyorsun?"
+        draft={
+          'id':key, 'project':project,'platform':platform,'topic':topic,
+          'status':'taslak', 'kind':'metin_senaryo_sablonu', 'format':style,
+          'hook':f"{topic.capitalize()} hakkında hiç böyle düşündün mü?",
+          'caption':caption,'script_outline':[
+             'Giriş: '+style+'.',
+             'Ana bölüm: '+direction,
+             'Kapanış: İzleyiciden görüş iste; doğrulanmamış iddiada bulunma.'
+          ],
+          'visual_prompt':('KADO Nova, aynı yüz ve saç stilini koruyan kurgusal karakter; '
+                           '9:16 dikey kompozisyon; konu: '+str(topic)+'; format: '+style),
+          'identity_consistency_note':'Gerçek yüz referansı kurulmadan aynı yüz garanti edilemez.',
+          'ready_for_publish':False,'human_approval_required':True,
+          'media_generated':False,'published':False,
+          'created_at':now.isoformat(timespec='seconds')
+        }
+        target=STUDIO/'drafts'/(key+'.json')
+        safe_write(target,draft)
+        files.append(key[-6:])
+    return (f"{project} için {count} ayrı {platform} metin senaryosu taslağı kaydettim. "
+            f"Taslak numaraları: {', '.join(files)}. "
+            "Bunlar metin/çekim planıdır; gerçek fotoğraf veya video üretilmedi, paylaşım yapılmadı. "
+            "Görsel ve son metin kalite kontrolü ile senin onayın gerekiyor.")
+
+
+def voice_route(request, project=None):
+    t=normalize(request)
+    if not ('influencer' in t or 'nova' in t or 'sanal karakter' in t or 'sanal yuz' in t):
+        return None
+    if any(w in t for w in ('durum','rapor','kac taslak','kac icerik','neler var')):
+        return status()
+    if any(w in t for w in ('takvim','planin ne','planlari say')) and not any(w in t for w in ('hazirla','uret','olustur','yaz')):
+        return calendar_report()
+    if any(w in t for w in ('hazirla','uret','olustur','yaz','gonderi','icerik','video','reels','shorts','post')):
+        return make_drafts(project_of(request,project),str(request).strip()[:180],platform_of(t),number_in(t))
+    return status()
+
+# EMINE_OTOMAT_V1_BASLANGIC
+_emine_otomat_eski_voice_route = voice_route
+def voice_route(request, project=None):
+    try:
+        from KADO_EMINE_OTOMAT import emine_kado_komutu
+        _yanit = emine_kado_komutu(request)
+        if _yanit is not None:
+            return _yanit
+    except Exception as _hata:
+        return 'Emine otomat hatasi: ' + str(_hata)[:250]
+    return _emine_otomat_eski_voice_route(request, project)
+# EMINE_OTOMAT_V1_BITIS

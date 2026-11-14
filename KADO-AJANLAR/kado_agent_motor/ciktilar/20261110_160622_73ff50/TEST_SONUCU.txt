@@ -1,0 +1,1 @@
+Python AST sozdizimi BASARILI. Kod CALISTIRILMADI; davranis ve guvenlik dogrulanmadi.

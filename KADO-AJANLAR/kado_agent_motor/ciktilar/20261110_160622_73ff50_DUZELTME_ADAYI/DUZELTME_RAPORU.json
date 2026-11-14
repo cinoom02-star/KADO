@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "line": 6,
+      "action": "remove_known_console_clear"
+    }
+  ],
+  "original": "C:\\KADO\\KADO-AJANLAR\\kado_agent_motor\\ciktilar\\20261110_160622_73ff50\\uygulama.py",
+  "note": "Kod calistirilmadi; davranis testi yapilmadi"
+}

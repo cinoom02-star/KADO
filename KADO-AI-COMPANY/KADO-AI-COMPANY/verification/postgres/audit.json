@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "schema",
+      "passed": true
+    },
+    {
+      "name": "scope",
+      "passed": true
+    },
+    {
+      "name": "hashes_sizes_and_paths",
+      "passed": true
+    },
+    {
+      "name": "file_count",
+      "passed": true
+    },
+    {
+      "name": "total_bytes",
+      "passed": true
+    },
+    {
+      "name": "exclusions_disclosed",
+      "passed": true
+    }
+  ],
+  "report_sha256": "156bf625c5365d36b426bd8d80c3847ac10140fab2c42608b1b6e22a6e75ad75",
+  "verified_file_count": 1,
+  "reason": "Dosya kanıtları bağımsız yeniden hesaplandı"
+}

@@ -1,0 +1,15 @@
+{
+  "version": "3.0.0",
+  "status": "hazir",
+  "identity": "KADO Nova",
+  "drafts": 0,
+  "days_planned": 30,
+  "publish_mode": "KAPALI",
+  "notes": [
+    "Sabit karakter altyapisi hazir.",
+    "30 gunluk taslak takvim hazir.",
+    "Resmi API baglantilari ayri asamada eklenecek.",
+    "Onaysiz yayin kapali."
+  ],
+  "updated_at": "2026-11-12T07:46:55+00:00"
+}

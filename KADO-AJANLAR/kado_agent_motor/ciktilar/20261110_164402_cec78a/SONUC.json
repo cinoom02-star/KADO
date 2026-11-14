@@ -1,0 +1,47 @@
+{
+  "gorev": "20261110_164402_cec78a",
+  "statik_karar": "STATIK_KONTROL_GECTI_DAVRANIS_TESTI_GEREKLI",
+  "davranis": {
+    "durum": "GECTI",
+    "testler": [
+      {
+        "girdi": [
+          2,
+          3
+        ],
+        "beklenen": 5,
+        "bulunan": 5,
+        "gecti": true
+      },
+      {
+        "girdi": [
+          0,
+          7
+        ],
+        "beklenen": 7,
+        "bulunan": 7,
+        "gecti": true
+      },
+      {
+        "girdi": [
+          -4,
+          6
+        ],
+        "beklenen": 2,
+        "bulunan": 2,
+        "gecti": true
+      }
+    ],
+    "aciklama": "Uretilen Python calistirilmadi; yalnizca izinli AST aritmetigi yorumlandi.",
+    "fonksiyon": "topla"
+  },
+  "soz_dizimi_duzeltme": false,
+  "ilk_uyarilar": [
+    "Riskli import: os",
+    "Riskli import: subprocess"
+  ],
+  "uzman_raporu": "C:\\KADO\\KADO-AJANLAR\\entegrasyon_raporlari\\20261110_164402_cec78a_uzman_akis.json",
+  "duzeltilmis_aday": null,
+  "karar": "INCELEME_GEREKLI",
+  "not": "Guvenilmeyen kod calistirilmadi; insan onayi olmadan yayinlanmaz."
+}

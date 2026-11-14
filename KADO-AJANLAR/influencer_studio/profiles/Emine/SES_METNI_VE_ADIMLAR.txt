@@ -1,0 +1,16 @@
+EMINE ILK REELS - ON IZLEME
+
+Bu video tek bir fotoğraftan yumuşak yakınlaştırma ile üretilmiştir.
+Ekran metinleri vardır, KONUŞAN AVATAR veya DUDAK SENKRONU YOKTUR.
+Fon sesi burada oluşturulmuş özgün sentetik bir sestir.
+
+Seslendirilecek metin: Merhaba, ben Emine. Yeni hikâyem başlıyor. Yakında burada birlikteyiz!
+
+SONRAKI ADIMLAR:
+1. Görseli ana karakter referansı olarak kilitle; siyah benin konumunu koru.
+2. ElevenLabs ses kaynağını bağla veya izinli başka bir ses seç.
+3. Bulutta lip-sync/image-to-video ile gerçek konuşan video üret.
+4. Mevcut KADO Denetçi ajanına gerçek kalite denetimi için bağlantı yap.
+5. Instagram yetkisi ve kullanıcı onayıyla yayınla.
+
+Bu paket mevcut KADO kurulumunu değiştirmez.

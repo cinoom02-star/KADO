@@ -1,0 +1,10 @@
+{
+  "direct_post_possible": true,
+  "draft_upload_possible": true,
+  "scope_examples": [
+    "video.upload",
+    "video.publish"
+  ],
+  "auto_publish": false,
+  "status": "baglanti_bekliyor"
+}

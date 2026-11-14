@@ -1,0 +1,39 @@
+{
+  "asama": 223,
+  "tarih_utc": "2026-11-10T12:54:02.341082+00:00",
+  "gorev_id": 2,
+  "yonetici": "MIMAR",
+  "uzman_rolleri": [
+    "U05",
+    "U06",
+    "U07"
+  ],
+  "pcm_test": {
+    "sample_rate": 16000,
+    "channels": 1,
+    "sample_width_bytes": 2,
+    "frame_ms": 20,
+    "samples_per_frame": 320,
+    "bytes_per_frame": 640,
+    "pcm_roundtrip": true
+  },
+  "dosyalar": [
+    {
+      "dosya": "kado_canli_gorev.py",
+      "mevcut": true,
+      "python_sozdizimi": "gecerli"
+    },
+    {
+      "dosya": "kado_gorev_calistir.py",
+      "mevcut": true,
+      "python_sozdizimi": "gecerli"
+    },
+    {
+      "dosya": "kado_otomatik_akis.py",
+      "mevcut": true,
+      "python_sozdizimi": "gecerli"
+    }
+  ],
+  "gercek_whatsapp_ses_akisi_test_edildi": false,
+  "gercek_gecikme_olculdu": false
+}
