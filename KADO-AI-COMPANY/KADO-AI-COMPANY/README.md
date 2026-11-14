@@ -38,7 +38,7 @@ Ayrı geliştirme paneli için `npm --prefix frontend run dev` kullanılır; Vit
 
 ## Veriler ve işletim
 
-Varsayılan SQLite dosyası, token ve çalışma çıktıları `data/` altındadır; kaynak paketinde gerçek kullanıcı verisi bulunmamalıdır. Yedekleme öncesi `DURDUR.bat` ile bu servisi kapatıp `data/` klasörünü güvenli bir konuma kopyalayın. Geri yükleme de servis kapalıyken yapılır. Çalışan SQLite dosyasını tek başına kopyalamak tutarlı yedek garantisi vermez.
+Varsayılan SQLite dosyası, token ve çalışma çıktıları `data/` altındadır; kaynak paketinde gerçek kullanıcı verisi bulunmamalıdır. Yedekleme öncesi `DURDUR.bat` ile bu servisi kapatın ve `KADO_YEDEKLE.bat` çalıştırın. SQLite anlık kopyası, dosya hash’leri ve manifest `backups/` altında hazırlanır. `KADO_GERI_YUKLE.bat "YEDEK.zip" "YENI_KLASOR"` yalnızca yeni bir klasöre geri yükler; var olan verinin üzerine yazmaz. API token ve loglar yedeklenmez. Özel `DATABASE_URL` veya PostgreSQL için kendi veritabanı yedekleme araçları gerekir. Ayrıntılar: [kurtarma](RECOVERY.md).
 
 İsteğe bağlı Docker Compose kurulumu için [ARCHITECTURE.md](ARCHITECTURE.md) ve `.env.example` dosyasını inceleyin. PostgreSQL desteği yapılandırılabilir; bu teslimatta PostgreSQL veya Docker gerçekten çalıştırılmadıysa test raporunda doğrulanmış yazılmaz.
 

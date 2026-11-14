@@ -19,7 +19,7 @@ def main():
         rel = path.relative_to(root)
         if any(part in excluded for part in rel.parts) or path.is_symlink() or not path.is_file():
             continue
-        if path.resolve() == destination or path.suffix in {".zip", ".pyc", ".log"}:
+        if path.resolve() == destination or path.name == "MANIFEST.sha256" or path.suffix in {".zip", ".pyc", ".log"}:
             continue
         if path.name.startswith(".env") and path.name != ".env.example":
             continue
@@ -34,6 +34,10 @@ def main():
     with zipfile.ZipFile(destination) as archive:
         assert archive.testzip() is None
         names = archive.namelist()
+        assert len(names) == len(set(names)), "Duplicate archive entries"
+        for entry in manifest:
+            expected, relative = entry.split("  ", 1)
+            assert hashlib.sha256(archive.read("KADO-AI-COMPANY/" + relative)).hexdigest() == expected
         assert all("/data/" not in n and "/node_modules/" not in n for n in names)
         assert all(not n.endswith("/.env") and "api-token.txt" not in n for n in names)
     print(f"Release: {len(entries)} files; {destination.stat().st_size} bytes; SHA256 {hashlib.sha256(destination.read_bytes()).hexdigest()}")
